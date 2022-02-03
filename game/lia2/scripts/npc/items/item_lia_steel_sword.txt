@@ -1,0 +1,41 @@
+"item_lia_steel_sword"
+	{
+
+		"ID"							"1106"
+		"ItemCost"						"45"
+		"ItemKillable" "0" 
+		"ItemDroppable" "1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemSellable"                  "1"
+		"ItemPurchasable"		 "1"
+		"ItemQuality"					"component"
+		"ItemAliases"					"sttel sword;ss;стальной меч;см"
+		"AbilityTextureName"			"custom/lia_steel_sword"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "item_datadriven"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"12"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_lia_steel_sword"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+			}
+		}
+	}
+	}

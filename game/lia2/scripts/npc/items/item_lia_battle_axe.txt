@@ -1,0 +1,116 @@
+"item_recipe_lia_battle_axe"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"1402"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"220"	
+	"ItemShopTags"					"str;damage;armor;hard_to_tag"
+	
+	"ItemKillable" 					"0" 
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+    "AbilityTextureName"    "recipe"
+	"ItemResult"					"item_lia_battle_axe"
+	"ItemRequirements"
+	{
+		"01"						"item_lia_ring_of_protection;item_lia_axe;item_lia_gloves_of_strength"
+	}
+}
+
+
+"item_lia_battle_axe"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1403"  //Valve's version of this item uses the ID "135".
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"Model"							"models/props_gameplay/red_box.vmdl" 
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"custom/lia_battle_axe"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"585"
+	"ItemShopTags"					"str;damage;armor;hard_to_tag"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"basher;боевой топор;бт;ba;battle axe"
+	"ItemKillable" 					"0" 
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_damage"			"16"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_strength"	"18"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"	"4"
+		}
+
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bash_chance"			"16"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bash_damage"			"80"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bash_stun"				"1.25"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_lia_battle_axe"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			"AllowIllusionDuplicate"    "1"
+			"Properties"
+			{
+			//	"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_strength"
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
+			}
+			
+			"OnAttackLanded"
+			{
+				"Random"
+				{
+					"Chance"			"%bash_chance"
+					"PseudoRandom"		"DOTA_PSEUDO_RANDOM_ITEM_BASHER"
+					"OnSuccess"
+					{
+						"RunScript"
+						{
+							"ScriptFile"	"items\BattleAxe.lua"
+							"Function"		"Bash"
+							"modifierName"	"modifier_item_lia_battle_axe"
+						}
+					}
+				}
+			}
+		}
+	}
+}

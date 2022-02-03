@@ -1,0 +1,62 @@
+<root>
+    <styles>
+ 		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+        <include src="file://{resources}/styles/custom_game/lia_end_screen.css" />
+    </styles>
+    <scripts>
+		<include src="file://{resources}/scripts/custom_game/lia_scoreboard_upd.js" />
+		<include src="file://{resources}/scripts/custom_game/lia_end_screen.js" />
+    </scripts>
+	<Panel hittest="false" class="EndScreenRoot">
+		<Panel hittest="false" class="EndScreenWindow">
+			<Label id="EndScreenVictory" text="" />
+			<Label id="EndScreenDificulty" class="TitleFont" text="Dificulty: sosite" />
+			<Label hittest="false" id="StatusScore" class="TitleFont" text=" " />	
+			<Panel class="Legend">
+				<Panel class="LegendPanel ScoreCol_TeamInfo" />
+				<Panel class="LegendPanel ScoreCol_Hero" />
+				<Panel class="LegendPanel ScoreCol_PlayerDetails" />
+
+				<Label class="LegendPanel ScoreCol_KillsBosses" text="#ScoreCol_KillsBosses" />
+				<Label class="LegendPanel ScoreCol_KillsCreeps" text="#ScoreCol_KillsCreeps" />
+				<Label class="LegendPanel ScoreCol_Level" text="#ScoreCol_Level" />
+				<Label class="LegendPanel ScoreCol_Upd" text="#ScoreCol_Upd" />
+				<Label class="LegendPanel ScoreCol_Deaths" text="#ScoreCol_Deaths" />
+				<Label class="LegendPanel ScoreCol_Rating" text="#ScoreCol_Rating" />
+				<Label class="LegendPanel ScoreCol_Items" text="#end_screen_legend_items" />  
+				
+			</Panel>
+			<Panel id="TeamsContainer" />
+			<Label hittest="false" id="StatusTime" class="TitleFont" text=" " />	
+			<Button id="CloseButton" onactivate="Game.FinishGame();">
+				<Label text="#CustomEndScreenClose" />
+			</Button>
+			<Panel hittest="false" class="EndScreenSocialMedia">
+				<Button id="DiscordButton" class="SocialMediaButton" onactivate="ExternalBrowserGoToURL( 'https://discord.gg/HQCTbFB')">
+					<Panel class="SocialMediaImagePanel">
+						<Image id="DiscordImage" class="SocialMediaImage" src="file://{images}/custom_game/discord_logo.png"/>
+					</Panel>
+					<Panel class="SocialMediaLabelPanel">
+						<Label class="SocialMediaLabel" text="Discord" />
+					</Panel>
+				</Button>
+				<Button id="VKButton" class="SocialMediaButton" onactivate="ExternalBrowserGoToURL( 'http://vk.com/lifeinarena')">
+					<Panel class="SocialMediaImagePanel">
+						<Image id="VkImage" class="SocialMediaImage" src="file://{images}/custom_game/vk_logo.png"/>
+					</Panel>
+					<Panel class="SocialMediaLabelPanel">
+						<Label class="SocialMediaLabel" text="VK" />
+					</Panel>
+				</Button>
+				<Button id="TwitterButton" class="SocialMediaButton" onactivate="ExternalBrowserGoToURL( 'http://twitter.com/lifeinarena')">
+					<Panel class="SocialMediaImagePanel">
+						<Image id="TwitterImage" class="SocialMediaImage" src="file://{images}/custom_game/twitter_logo.png"/>
+					</Panel>
+					<Panel class="SocialMediaLabelPanel">
+						<Label class="SocialMediaLabel" text="Twitter" />
+					</Panel>
+				</Button>
+			</Panel>
+		</Panel>	
+	</Panel>
+</root>

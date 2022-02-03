@@ -1,0 +1,67 @@
+<root>
+    <styles>
+ 		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+        <include src="file://{resources}/styles/custom_game/lia_end_screen.css" />
+    </styles>
+    <!-- --> <scripts>
+		<include src="file://{resources}/scripts/custom_game/lia_tooltips_items.js" />
+    </scripts> 
+	<Panel class="PlayerRow">
+		<Panel id="PlayerRowContainer">
+			<Panel id="Hero" class="ScoreCol_Hero ScoreboardPanel">
+				<Image id="HeroIcon" heroimagestyle="landscape" scaling="stretch-to-fit-preserve-aspect" />
+			</Panel>
+			<Panel id="PlayerDetailsContainer" class="ScoreCol_PlayerDetails ScoreboardPanel">
+				<Panel id="PlayerAndHeroName">
+					<Label id="PlayerName" text="Unknown" />
+					
+				</Panel>
+			</Panel>
+			<!--<Panel id="TeamScoreSpace" class="ScoreCol_TeamScore" />-->
+			
+			<Panel id="KillsBossesContainer" class="ScoreCol_KillsBosses ScoreboardPanel">
+				<Label id="KillsBosses" text="0" />
+			</Panel>
+			<Panel id="KillsCreepsContainer" class="ScoreCol_KillsCreeps ScoreboardPanel">
+				<Label id="KillsCreeps" text="0" />
+			</Panel>
+			<Panel id="LevelContainer" class="ScoreCol_Level ScoreboardPanel">
+				<Label id="Level" text="0" />
+			</Panel>
+			<Panel id="UpdContainer" class="ScoreCol_Upd ScoreboardPanel">
+				<Label id="Upd" text="0" />
+			</Panel>
+			
+			<Panel id="DeathsContainer" class="ScoreCol_Deaths ScoreboardPanel">
+				<Label id="Deaths" text="0" />
+			</Panel>
+			<Panel id="RatingContainer" class="ScoreCol_Rating ScoreboardPanel">
+				<Label id="Rating" text="0" />
+			</Panel>
+			
+			<Panel id="PlayerItemsContainer" class="ScoreCol_Items ScoreboardPanel" >
+				<Image id="_dynamic_item_0" class="PlayerItem" 
+					onmouseover="ItemShowTooltip0()"
+					onmouseout="ItemHideTooltip0()"				/> 
+				<Image id="_dynamic_item_1" class="PlayerItem"
+					onmouseover="ItemShowTooltip1()"
+					onmouseout="ItemHideTooltip1()"				/> 
+				<Image id="_dynamic_item_2" class="PlayerItem"
+					onmouseover="ItemShowTooltip2()"
+					onmouseout="ItemHideTooltip2()"				/> 
+				<Image id="_dynamic_item_3" class="PlayerItem"
+					onmouseover="ItemShowTooltip3()"
+					onmouseout="ItemHideTooltip3()"				/> 
+				<Image id="_dynamic_item_4" class="PlayerItem"
+					onmouseover="ItemShowTooltip4()"
+					onmouseout="ItemHideTooltip4()"				/> 
+				<Image id="_dynamic_item_5" class="PlayerItem"
+					onmouseover="ItemShowTooltip5()"
+					onmouseout="ItemHideTooltip5()"				/> 
+					 					
+
+			</Panel>
+
+		</Panel>
+	</Panel>
+</root>

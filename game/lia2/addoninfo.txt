@@ -1,0 +1,22 @@
+"AddonInfo"
+{
+	"maps"  "lia_8_players lia_extreme_8_players lia_light_8_players"
+	"IsPlayable" "1"
+	
+	"lia_8_players"
+ 	{
+  		"MaxPlayers" "8"
+ 	}
+
+ 	"lia_extreme_8_players"
+ 	{
+  		"MaxPlayers" "8"
+ 	}
+ 	
+
+ 	"lia_light_8_players"
+ 	{
+  		"MaxPlayers" "8"
+ 	}
+ 	
+}

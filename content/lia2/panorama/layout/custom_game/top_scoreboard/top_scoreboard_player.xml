@@ -1,0 +1,32 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />		
+		<include src="file://{resources}/styles/custom_game/top_scoreboard/top_scoreboard.css" />
+	</styles>
+	<script>
+	function PortraitClicked()
+	{
+		// TODO: ctrl and alt click support
+		Players.PlayerPortraitClicked( $.GetContextPanel().GetAttributeInt( "player_id", -1 ), false, false );
+	}
+	</script>
+	<Panel hittest="false" class="ScoreboardPlayerWrapper">
+		<Panel id="SlantedContainerPanel" class="SlantedContainer" always-cache-composition-layer="true" >
+			<Panel id="PlayerColor"/>
+			<Image id="DeadLayer" src="s2r://panorama/images/hud/reborn/top_bar_dead_overlay_png.vtex"/>
+			
+			<Panel id="DisconnectIcon" hittest="false"/>
+			<Button onmouseactivate="PortraitClicked()">
+				<DOTAHeroImage id="HeroImage" class="TopBarHeroImage" always-cache-composition-layer="true"  hittest="true" >
+					<Image id="PlusLayer" src="file://{images}/custom_game/top_bar_ready_to_round.png" />/>
+				</DOTAHeroImage>
+
+			</Button>
+			<Panel id="PlayerColorShadow" hittest="false"/>
+		</Panel>
+
+		<ProgressBar id="HealthBar" class="TopBarHealthBar"/>
+		<ProgressBar id="ManaBar" class="TopBarManaBar"/>
+		<Panel id="TopBarUltIndicator" class="TopBarUltIndicator"/>
+	</Panel>
+</root>

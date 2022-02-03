@@ -1,0 +1,42 @@
+"item_lia_ring_of_protection"
+	{
+
+		"ID"							"1107"
+		"ItemCost"						"80"
+		"ItemKillable" "0" 
+		"ItemDroppable" "1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemSellable"                  "1"
+		"ItemPurchasable"		 "1"
+		"ItemQuality"					"component"
+		"ItemAliases"					"rop;ring of protection;кз;кольцо защиты"
+
+		"AbilityTextureName"			"custom/lia_ring_of_protection"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "item_datadriven"
+// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"bonus_armor"			"3"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_lia_ring_of_protection"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		        "MODIFIER_ATTRIBUTE_MULTIPLE"
+			"AllowIllusionDuplicate"    "1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
+			}
+		}
+	}
+	}

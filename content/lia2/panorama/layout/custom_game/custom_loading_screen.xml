@@ -1,0 +1,22 @@
+<root>
+ 	<styles>
+		<include src="file://{resources}/styles/custom_game/custom_loading_screen.css" />
+	</styles> 
+
+	<script>
+		var tipCount = 14
+		$("#Tip").text = $.Localize("#lia_tip" + Math.floor( ( Math.random() * tipCount ) + 1) )
+	</script>
+
+	<Panel>
+		
+		<Image id="image_bg" class="ImageBg" src="file://{images}/custom_game/loading_screen/loadscreen.psd" scaling="stretch-to-fit-y-preserve-aspect" />
+
+		<Panel id="TipContainer">
+			<Label id="Tip" multiline="true" text="#lia_tip1"/>
+		</Panel>
+
+	<!--	<Image src="file://{images}/items/lia_demon_edge.png" />-->
+
+	</Panel>
+</root>

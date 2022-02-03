@@ -1,0 +1,34 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="file://{resources}/styles/custom_game/notifications.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/notifications.js" />
+	</scripts>
+	<!-- <Panel hittest="false" class="LiAHints">
+
+	</Panel> -->
+	<Panel hittest="false" class="LiANotification">
+		
+		<Panel hittest="false" id="LiaRound" text="">
+				<Label hittest="false" id="LiaRound_Number" class="TitleFont" text="#LiaRoundNumber" />
+				<Label hittest="false" id="LiaRound_Name" class="TitleFont" text="#LiaRoundName" />	
+		</Panel>	
+		
+		
+		<Panel hittest="false" id="LiaFallenChampion" text="">
+				<Label hittest="false" id="LiaFallenChampion_Count" class="TitleFont" text="10" />
+		</Panel>	
+		
+		<!--<Panel hittest="false" id="LiaDuel" text=""> 
+				<Label hittest="false" id="LiaDuel_Number" class="TitleFont" text="#LiaDuelNumber" />
+				 <Label hittest="false" id="LiaDuel_Text" class="TitleFont" text="#LiaDuelText" />	
+				<Panel hittest="false" id="LiaDuel_Images" text="">
+					<Image hittest="false" id="LiaDuel_Hero1" />
+					<Label hittest="false" id="LiaDuel_Text" class="TitleFont" text="#LiaDuelText" />
+					<Image hittest="false" id="LiaDuel_Hero2" />
+				</Panel>
+		</Panel>-->
+	</Panel>
+</root>

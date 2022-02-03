@@ -1,0 +1,59 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="file://{resources}/styles/custom_game/game_info.css" />
+	</styles>
+
+	<Panel class="GameInfo" >
+		<Panel id="Title">
+			<Label id="TitleName" text="#addonname" />
+		</Panel> 
+		<Label id="GameDescription" text="#welcome" />		
+		 <Label id="Cel" class="Header" html="true" text="#target" /> 
+		<Label id="cel1" class="InfoRowTarget" html="true" text="#targetInfo" /> 
+		<Panel id="Image1Row" class="InfoRow" >
+			<Label id="Image1Text" text="#targetInfo1" />
+			<Image id="Image1" src="file://{images}/custom_game/Koboldcreepsssss.png" />
+		</Panel> 
+		<Label id="Sov" class="Header" html="true" text="#Sovets" />
+		<Panel id="Image2Row" class="InfoRow" >
+			<Image id="Image2" src="file://{images}/custom_game/mine.png" />
+			<Label id="Image2Text" text="#SovInfo1" />
+		</Panel>
+		
+		<Label id="sov1" class="InfoRow" html="true" text="#SovInfo2" />
+		<Label id="sov2" class="InfoRow" html="true" text="#SovInfo3" />	
+		<Label id="sov3" class="InfoRow" html="true" text="#SovInfo4" />	
+		
+		<Panel id="Image22Row" class="InfoRow" >
+			<Image id="Image22" src="file://{images}/custom_game/regen2.png" />
+			<Label id="Image22Text" text="#SovInfo5" />
+		</Panel>
+		
+		<!--<Label id="sov4" class="InfoRow" html="true" text="#SovInfo5" />	
+		<Image id="ImageRunes" src="file://{images}/custom_game/regen.png" /> --> 
+		 
+		<Label id="Due" class="Header" html="true" text="#DueInfo" />	
+		<Image id="ImageDu" src="file://{images}/custom_game/5.png" />
+		<Label id="due1" class="InfoRow" html="true" text="#DueInfo1" />	
+		<Label id="due2" class="InfoRow" html="true" text="#DueInfo2" />	
+		
+		<Label id="Re" class="Header" html="true" text="#ReInfo" />
+		<Panel id="ImageSmallRow" class="InfoRow" >
+			<Label id="ImageSmallText" text="#ReInfo1" />
+			 <Image id="ImageSmall" src="file://{images}/custom_game/sl3.png" /> 
+			<Label id="ImageSmallText2" text="#ReInfo2" />
+		</Panel>
+		<Panel id="Image3Row" class="InfoRow" >
+			<Image id="Image3" src="file://{images}/custom_game/s5.png" /> 
+			<!--<Image id="Image4" src="file://{images}/custom_game/items/lia_bottle.png" />
+			<Image id="Image5" src="file://{images}/custom_game/items/lia_ferus_shield.png" />
+			<Image id="Image6" src="file://{images}/custom_game/items/lia_ferus_shield1.png" />--> 
+		</Panel>
+		
+		<!--<Label id="Run" class="Header" html="true" text="#RunInfo" />
+		<Label id="run1" class="InfoRow" html="true" text="#RunInfo1" />	
+		 <Label id="Ulu" class="Header" html="true" text="#UluInfo" /> -->
+		<!-- <Label id="ulu1" class="InfoRow" html="true" text="#UluInfo1" />	--> 
+	</Panel>		
+</root>

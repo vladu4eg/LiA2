@@ -1,0 +1,12 @@
+<root>
+    <styles>
+ 		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="file://{resources}/styles/custom_game/lia_scoreboard_styles.css" />
+        <include src="file://{resources}/styles/custom_game/lia_scoreboard.css" />
+    </styles>
+	<Panel hittest="false" class="FlyoutTeam">
+		<Panel class="FlyoutTeamData">
+			<Panel id="PlayersContainer" />
+		</Panel>
+	</Panel>
+</root>
