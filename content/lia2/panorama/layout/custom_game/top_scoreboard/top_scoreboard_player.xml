@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="file://{resources}/styles/dotastyles.css" />		
-		<include src="file://{resources}/styles/custom_game/top_scoreboard/top_scoreboard.css" />
+		<include src="s2r://panorama/styles/dotastyles.css" />		
+		<include src="s2r://panorama/styles/custom_game/top_scoreboard/top_scoreboard.css" />
 	</styles>
 	<script>
 	function PortraitClicked()
@@ -18,7 +18,7 @@
 			<Panel id="DisconnectIcon" hittest="false"/>
 			<Button onmouseactivate="PortraitClicked()">
 				<DOTAHeroImage id="HeroImage" class="TopBarHeroImage" always-cache-composition-layer="true"  hittest="true" >
-					<Image id="PlusLayer" src="file://{images}/custom_game/top_bar_ready_to_round.png" />/>
+					<Image id="PlusLayer" src="file://{images}/custom_game/top_bar.png" />
 				</DOTAHeroImage>
 
 			</Button>

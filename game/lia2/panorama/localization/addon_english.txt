@@ -1,15 +1,15 @@
 "addon"
 {
-	"addonname"										"Life In Arena"
-	"addon_game_name"								"Life In Arena"
-	"DOTA_GameMode_15"								"Life In Arena"
+	"addonname"										"Life In Arena 2"
+	"addon_game_name"								"Life In Arena 2"
+	"DOTA_GameMode_15"								"Life In Arena 2"
 
 	"LiaRoundNumber"								"Round #{d:round_number}"
 	"LiaRoundName"									"{s:round_name}"
 
 	"LiaRound"										"Round"
 	
-	"addon_game_name"								"Life in Arena"
+	"addon_game_name"								"Life in Arena 2"
 
 	"round_name_1"									"Kobolds"
 	"round_name_2"									"Centaurs"
@@ -57,7 +57,7 @@
 	
 	"end_screen_legend_items"	"Items"
 	
-	"welcome"		"Welcome to Life in Arena!"
+	"welcome"		"Welcome to Life in Arena 2!"
 	"target"		"Objective:"
 	"targetInfo"	"Kill 20 waves of creeps, bosses and megabosses to stay alive."
 	"targetInfo1"	" * If all heroes die, you will lose."
@@ -69,7 +69,7 @@
 	"SovInfo5"		"   * Use runes properly to stay alive as long as possible."
 	
 	"DueInfo" 		"Duels:"
-	"DueInfo1"		"   * Don't take them seriously. Life in Arena is a team game and duels are just a small bonus in it;"
+	"DueInfo1"		"   * Don't take them seriously. Life in Arena 2 is a team game and duels are just a small bonus in it;"
 	"DueInfo2"		"   * You are free to use potions during duels, but don't spend more than you can earn."
 	
 	"ReInfo"		"Scoreboard:"
@@ -202,8 +202,20 @@
 	"Upgrade_health_regen"  "Wound Mending"
 	"Upgrade_mana"  "Meditation"
 	"Upgrade_health"  "Toughness"
-
-	"Upgrade_level"	"Level {s:level}"
+	
+	"Upgrade_level0"	"Level: 0"
+	"Upgrade_level1"	"Level: 1"
+	"Upgrade_level2"	"Level: 2"
+	"Upgrade_level3"	"Level: 3"
+	"Upgrade_level4"	"Level: 4"
+	"Upgrade_level5"	"Level: 5"
+	"Upgrade_level6"	"Level: 6"
+	"Upgrade_level7"	"Level: 7"
+	"Upgrade_level8"	"Level: 8"
+	"Upgrade_level9"	"Level: 9"
+	"Upgrade_level10"	"Level: 10"
+	"Upgrade_level11"	"Level: 11"
+	"Upgrade_level12"	"Level: 12"
 
 	"Upgrade_attack_damage_description"	"Increases attack damage of the hero by {s:perLevelBonus} per level."
 	"Upgrade_attack_speed_description"	"Increases attack speed of the hero by {s:perLevelBonus} per level."

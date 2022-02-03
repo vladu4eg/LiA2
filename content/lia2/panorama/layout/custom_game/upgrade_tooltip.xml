@@ -15,7 +15,7 @@
 
 			$("#Title").text = $.Localize("#"+upgradeName)
 
-			$("#Level").SetDialogVariable("level",level)
+			$("#Level").text = $.Localize("#Upgrade_level"+level)
 
 			$("#Description").text = "#"+upgradeName+"_description"
 			$("#Description").SetDialogVariable("perLevelBonus",Players.GetUpgradeBonusPerLevel(upgradeName))

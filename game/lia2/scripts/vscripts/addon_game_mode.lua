@@ -15,6 +15,8 @@ require('wearables')
 require('SelectPets')
 require('pets')
 require('shop')
+require("PrecacheLoad")
+require('reklama')
 
 function Activate()
 	GameRules.LiA = LiA()
@@ -214,6 +216,8 @@ function Precache( context )
 		--Неоригинальные модели крипов
 		PrecacheModel("models/creeps/thief/thief_01_leader.vmdl", context)
 		PrecacheModel("models/creeps/thief/thief_01.vmdl", context)
+
+		PrecacheLoad:PrecacheLoad (context)
 
 		GameRules.isTesting = false
 		GameRules.server =   "https://tve3.us/lia2/"  -- "https://localhost:5001/test/" -- 

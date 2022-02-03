@@ -69,8 +69,8 @@ function OnUpdatePlayerData( data )
 {
 	var scoreboardConfig =
 	{
-		"teamXmlName" : "file://{resources}/layout/custom_game/lia_scoreboard_team.xml",
-		"playerXmlName" : "file://{resources}/layout/custom_game/lia_scoreboard_player.xml",
+		"teamXmlName" : "s2r://panorama/layout/custom_game/lia_scoreboard_team.xml",
+		"playerXmlName" : "s2r://panorama/layout/custom_game/lia_scoreboard_player.xml",
 	};
 
 	g_ScoreboardHandle = ScoreboardUpdater_InitializeScoreboard( scoreboardConfig, $( "#TeamsContainer" )); // 

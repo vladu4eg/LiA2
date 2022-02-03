@@ -1,7 +1,7 @@
 <root>
     <styles>
-  		<include src="file://{resources}/styles/dotastyles.css" />
-        <include src="file://{resources}/styles/custom_game/top_scoreboard/top_scoreboard.css" />
+  		<include src="s2r://panorama/styles/dotastyles.css" />
+        <include src="s2r://panorama/styles/custom_game/top_scoreboard/top_scoreboard.css" />
 
     </styles>
 

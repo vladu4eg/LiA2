@@ -5,5 +5,9 @@
 		"custom_modifier_state",
 		"lia_player_table",
 		"upgrades",
+		"Particles_Tabel",
+		"scorestats",
+		"Pets_Tabel",
+		"Shop",
 	]
 }

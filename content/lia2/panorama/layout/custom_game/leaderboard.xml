@@ -1,10 +1,10 @@
 <root>
 	<scripts>
-		<include src="file://{resources}/scripts/custom_game/leaderboard.js" />
+		<include src="s2r://panorama/scripts/custom_game/leaderboard.js" />
 	</scripts>
 
 	<styles>
-		<include src="file://{resources}/styles/custom_game/leaderboard.css" />
+		<include src="s2r://panorama/styles/custom_game/leaderboard.css" />
 	</styles>
 	<Panel class="LeaderboardMain" hittest="false"> 
 		<Panel id="LeaderboardButton" onactivate="ToggleLeaderboard();">

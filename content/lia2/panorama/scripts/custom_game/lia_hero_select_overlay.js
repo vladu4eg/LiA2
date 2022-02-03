@@ -18,7 +18,7 @@ function UpdatePlayer( playerId )
 	if ( playerPanel === null )
 	{
 		playerPanel = $.CreatePanel( "Panel", playerContainer, playerPanelName );
-		playerPanel.BLoadLayout( "file://{resources}/layout/custom_game/hero_picking_player.xml", false, false );
+		playerPanel.BLoadLayout( "s2r://panorama/layout/custom_game/hero_picking_player.xml", false, false );
 		playerPanel.AddClass( "PlayerPanel" );
 		playerPanel.AddClass( "Slot"+playerId)
 		$.CreatePanel( "Panel", playerContainer, "Spacer" );

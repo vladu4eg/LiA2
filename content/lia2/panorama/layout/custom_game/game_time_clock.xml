@@ -1,7 +1,7 @@
 <root>
 
 	<styles>
-        <include src="file://{resources}/styles/custom_game/game_time_clock.css" />
+        <include src="s2r://panorama/styles/custom_game/game_time_clock.css" />
     </styles>
 	
 	<script>

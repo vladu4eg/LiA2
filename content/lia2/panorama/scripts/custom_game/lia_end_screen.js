@@ -141,8 +141,8 @@ function OnUpdActionEnd( data )
 
 	var scoreboardConfig =
 	{
-		"teamXmlName" : "file://{resources}/layout/custom_game/lia_end_screen_team.xml",
-		"playerXmlName" : "file://{resources}/layout/custom_game/lia_end_screen_player.xml",
+		"teamXmlName" : "s2r://panorama/layout/custom_game/lia_end_screen_team.xml",
+		"playerXmlName" : "s2r://panorama/layout/custom_game/lia_end_screen_player.xml",
 	};
 	_containerPanel = $( "#TeamsContainer" );
 	_endScoreboardHandle = ScoreboardUpdater_InitializeScoreboard( scoreboardConfig, _containerPanel );

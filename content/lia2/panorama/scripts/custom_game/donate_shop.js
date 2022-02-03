@@ -1005,7 +1005,7 @@ function SetItemBuyFunction(panel, table){
 
 	if (table[4].indexOf("pet") == 0) {
 		panel.SetPanelEvent("onmouseover", function() { 
-		//	$.DispatchEvent("UIShowCustomLayoutParametersTooltip", panel, "PreviewItemTooltipPet"+table[0], "file://{resources}/layout/custom_game/pets_tooltips.xml", "num="+table[0]);
+		//	$.DispatchEvent("UIShowCustomLayoutParametersTooltip", panel, "PreviewItemTooltipPet"+table[0], "s2r://panorama/layout/custom_game/pets_tooltips.xml", "num="+table[0]);
 		})
 
 		panel.SetPanelEvent("onmouseout", function() { 
@@ -1013,7 +1013,7 @@ function SetItemBuyFunction(panel, table){
 		})
 	} else if (table[4].indexOf("particle") == 0) {
 		panel.SetPanelEvent("onmouseover", function() { 
-		//	$.DispatchEvent("UIShowCustomLayoutParametersTooltip", panel, "PreviewItemTooltipParticle"+table[0], "file://{resources}/layout/custom_game/particles_tooltips.xml", "num="+table[0]);
+		//	$.DispatchEvent("UIShowCustomLayoutParametersTooltip", panel, "PreviewItemTooltipParticle"+table[0], "s2r://panorama/layout/custom_game/particles_tooltips.xml", "num="+table[0]);
 		})
 
 		panel.SetPanelEvent("onmouseout", function() { 
@@ -1021,7 +1021,7 @@ function SetItemBuyFunction(panel, table){
 		})
 	}else if (table[4].indexOf("pet") == 0) {
 			panel.SetPanelEvent("onmouseover", function() { 
-			//	$.DispatchEvent("UIShowCustomLayoutParametersTooltip", panel, "PreviewItemTooltipParticle"+table[0], "file://{resources}/layout/custom_game/particles_tooltips.xml", "num="+table[0]);
+			//	$.DispatchEvent("UIShowCustomLayoutParametersTooltip", panel, "PreviewItemTooltipParticle"+table[0], "s2r://panorama/layout/custom_game/particles_tooltips.xml", "num="+table[0]);
 			})
 	
 			panel.SetPanelEvent("onmouseout", function() { 
@@ -1095,7 +1095,7 @@ function SetItemInventory(panel, table) {
 	// Проверяет если это курьер или эффект то создает превью при наведении (В ИНВЕНТАРЕ)
 	if (table[4].indexOf("pet") == 0) {
 		panel.SetPanelEvent("onmouseover", function() { 
-		//	$.DispatchEvent("UIShowCustomLayoutParametersTooltip", panel, "PreviewItemTooltipPet"+table[0], "file://{resources}/layout/custom_game/pets_tooltips.xml", "num="+table[0]);
+		//	$.DispatchEvent("UIShowCustomLayoutParametersTooltip", panel, "PreviewItemTooltipPet"+table[0], "s2r://panorama/layout/custom_game/pets_tooltips.xml", "num="+table[0]);
 		})
 		panel.SetPanelEvent("onmouseout", function() { 
 		//	$.DispatchEvent( "UIHideCustomLayoutTooltip", panel, "PreviewItemTooltipPet"+table[0]);
@@ -1106,7 +1106,7 @@ function SetItemInventory(panel, table) {
 	} 
 	else if (table[4].indexOf("particle") == 0) {
 		panel.SetPanelEvent("onmouseover", function() { 
-		//	$.DispatchEvent("UIShowCustomLayoutParametersTooltip", panel, "PreviewItemTooltipParticle"+table[0], "file://{resources}/layout/custom_game/particles_tooltips.xml", "num="+table[0]);
+		//	$.DispatchEvent("UIShowCustomLayoutParametersTooltip", panel, "PreviewItemTooltipParticle"+table[0], "s2r://panorama/layout/custom_game/particles_tooltips.xml", "num="+table[0]);
 		})
 		panel.SetPanelEvent("onmouseout", function() { 
 		//	$.DispatchEvent( "UIHideCustomLayoutTooltip", panel, "PreviewItemTooltipParticle"+table[0]);
@@ -1117,7 +1117,7 @@ function SetItemInventory(panel, table) {
 	}
 	else if (table[4].indexOf("skin") == 0) {
 		panel.SetPanelEvent("onmouseover", function() { 
-		//	$.DispatchEvent("UIShowCustomLayoutParametersTooltip", panel, "PreviewItemTooltipParticle"+table[0], "file://{resources}/layout/custom_game/particles_tooltips.xml", "num="+table[0]);
+		//	$.DispatchEvent("UIShowCustomLayoutParametersTooltip", panel, "PreviewItemTooltipParticle"+table[0], "s2r://panorama/layout/custom_game/particles_tooltips.xml", "num="+table[0]);
 		})
 		panel.SetPanelEvent("onmouseout", function() { 
 		//	$.DispatchEvent( "UIHideCustomLayoutTooltip", panel, "PreviewItemTooltipParticle"+table[0]);

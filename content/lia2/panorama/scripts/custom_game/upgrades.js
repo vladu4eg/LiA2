@@ -42,7 +42,7 @@ function Upgrade(upgradeName)
 
 	upgradeButton.SetPanelEvent("onmouseover", function() { 
 		$.DispatchEvent("UIShowCustomLayoutParametersTooltip", upgradeButton, "UpgradeTooltip", 
-			"file://{resources}/layout/custom_game/upgrade_tooltip.xml", "upgradeName="+upgradeName);
+			"s2r://panorama/layout/custom_game/upgrade_tooltip.xml", "upgradeName="+upgradeName);
 		upgradeButton.AddClass("tooltip")
 	})
 
@@ -85,7 +85,7 @@ function Update()
 
 		if ( upgradeButton.BHasClass("tooltip") )
 			$.DispatchEvent("UIShowCustomLayoutParametersTooltip", upgradeButton, "UpgradeTooltip", 
-			"file://{resources}/layout/custom_game/upgrade_tooltip.xml", "upgradeName="+upgradeName);
+			"s2r://panorama/layout/custom_game/upgrade_tooltip.xml", "upgradeName="+upgradeName);
 	}
 }
 

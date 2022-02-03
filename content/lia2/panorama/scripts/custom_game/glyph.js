@@ -12,7 +12,7 @@ function GlyphTooltip()
 {
 	if (glyphButton.enabled) {
 		$.DispatchEvent("UIShowCustomLayoutTooltip", glyphButton, "GlyphTooltip", 
-			"file://{resources}/layout/custom_game/glyph_tooltip.xml"); 
+			"s2r://panorama/layout/custom_game/glyph_tooltip.xml"); 
 	}
 }
 

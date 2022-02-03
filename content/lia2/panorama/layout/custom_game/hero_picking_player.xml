@@ -1,9 +1,9 @@
 
 <root>
 	<styles>
-		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/dotastyles.css" />
 		<include src="s2r://panorama/styles/hudstyles.vcss_c" />
-		<include src="file://{resources}/styles/custom_game/hero_picking_player.css" />
+		<include src="s2r://panorama/styles/custom_game/hero_picking_player.css" />
 	</styles>
 
 	<Panel class="HeroPickingPlayer">

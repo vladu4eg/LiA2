@@ -323,11 +323,6 @@ function Survival:OnPlayerChat(event)
             end
             return "Just a table"
         end
-
-        if event.text == "test" then
-            local hero = PlayerResource:GetSelectedHeroEntity(playerID)
-            hero:GetItemInSlot(15):RemoveSelf()
-        end
     
     end
 

@@ -24,6 +24,8 @@ var dotaHud = $.GetContextPanel().GetParent().GetParent().GetParent().GetParent(
 	dotaHud.FindChildTraverse("PreGame").FindChildTraverse("HeaderCenter").style.marginLeft = "1150px"
 	dotaHud.FindChildTraverse("PreGame").FindChildTraverse("TeamPurchasesStrategyControl").style.visibility = "collapse";
 
+	//dotaHud.FindChildTraverse("inventory_tpscroll_container").style.visibility = "collapse";
+
 	var onUpdateHeroSelection = function(data) {
 		//$.Msg(data)
 		var heroPickAbi = dotaHud.FindChildTraverse("PreGame").FindChildTraverse("HeroPickScreen").FindChildTraverse("HeroAbilities")

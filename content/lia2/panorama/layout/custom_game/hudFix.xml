@@ -1,7 +1,8 @@
 <root>
   <scripts>
-    <include src="file://{resources}/scripts/custom_game/hudFix.js" />
+    <include src="s2r://panorama/scripts/custom_game/hudfix.js" />
   </scripts>
+
 
   <Panel class="hudFix"/>
 

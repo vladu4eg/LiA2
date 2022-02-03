@@ -133,7 +133,7 @@ function TradeRequest()
 			
 			var PlayerPanel = $.CreatePanel("Panel", playersContainer, "player"+PlayerID)
 			PlayerPanel.SetAttributeInt("player_id", PlayerID);
-			PlayerPanel.BLoadLayout("file://{resources}/layout/custom_game/trade/player_row.xml", false, false )
+			PlayerPanel.BLoadLayout("s2r://panorama/layout/custom_game/trade/player_row.xml", false, false )
 			isOnePlayer = false
 		}
 
@@ -141,7 +141,7 @@ function TradeRequest()
 	}
 
 	if (isOnePlayer) {
-		$.FindChildInContext("#OpenButton").visible = false;
+		$.FindChildInContext("#OpenButton").visible = true;
 		return;
 	}
 
