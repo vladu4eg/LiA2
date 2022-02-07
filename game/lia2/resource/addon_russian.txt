@@ -3508,5 +3508,68 @@
 
 		"DOTA_Tooltip_modifier_staff_of_life_effect"	"Посох Жизни"
 		"DOTA_Tooltip_modifier_staff_of_life_effect_Description"	"Ещё можно восстановить себе и вернуть противникам %dMODIFIER_PROPERTY_TOOLTIP% единиц урона."
+
+
+		"buy_currency"						"Покупка LiA Coint."
+		"buy_currency_description"			"100 руб = 170 монет. Можно донатить через Сбер, Киви или Яндекс(Писать в Дискорде). Есть скидки за большое количество монет(Писать в Дискорде). При первой покупке от +50 монет выдается 100 монет бесплатно (Писать в Discord)."
+
+
+		"shop_button"	"Магазин"
+
+		"shop_main"		"Главная"
+		"shop_items"		"Товары"
+		"shop_pets"		"Питомцы"
+		"shop_particles"		"Эффекты"
+
+		"shop_gem"		"Предметы за Gem"
+	
+		"shop_recomended"		"Предметы со скидкой"
+	
+		"shop_all"		"Все"
+		"shop_subscribe"		"Подписка"
+		"shop_currency"		"Валюта"
+
+		"ads_name_1"		"Купить Battle Pass"
+		"ads_name_2"		"Купить Сундук"
+
+		"shop_bought"		"Куплен"
+		"shop_gold"			"В сундуке"
+		"shop_event"		"Ивент"
+		"shop_buy"			"Купить"
+		"shop_activate"		"Включить"
+		"shop_deactivate"	"Выключить"
+
+		"shop_trollchance"	"Шанс стать тролем: "
+		"shop_bonusrate"	"Бонус рейтинга: "
+		"shop_trollchance_date"			"Действует до: "
+		"shop_bonusrate_date"			"Действует до: "
+		"shop_no_money"						"Недостаточно средств на счету!"
+		"shop_nice_buy"						"Отправлен запрос на покупку. ЕСЛИ ДОНАТ НЕ БЫЛ ВЫДАН В СЛЕДУЮЩЕЙ ИГРЕ, ТО ОБРАТИТЕСЬ К РАЗРАБОТЧИКУ! Спасибо за поддержку!"
+		"shop_error_label"					"Недостаточно средств на счету!"
+
+		"BattlePass_button" "Пропуск"
+		"BattlePass_Name" 	"Battle Pass"
+		"battleshop_gives" "Получить"
+		"battleshop_locked" "Закрыто"
+		"battlepass_inbp" "В пропуске"
+		"battlepass_level" "Уровень"
+		"battlepass_free" "Бесплатно"
+		"battlepass_gives"	"ПОЛУЧЕНО"
+
+		"shop_inventory"	"Инвентарь"
+		"shop_chests"		"Сундуки"
+
+		"shop_chest_count" "Количество"
+		"shop_open"			"Открыть"
+		"shop_currency_gold"	"LiA Coint"
+		"shop_currency_gem"		"LiA Coint"
+		"shop_accept"			"Принять"
+
+		"shop_chance"	"Шанс выпадения: "
+		"shop_currency_count"	"Количество LiA Coint"
+		"shop_currency_count_from"	"от"
+		"shop_currency_count_to"	"до"
+
+
 		}
 }

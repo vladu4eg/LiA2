@@ -148,22 +148,23 @@ function Survival:InitSurvival()
                 Shop.RequestSkin(i, steam, callback)
                 Shop.RequestVipDefaults(i, steam, callback)
                 Shop.RequestPetsDefaults(i, steam, callback)
+                Shop.RequestPets(i, steam, callback)
                 Stats.RequestData(i)
                 Shop.RequestCoint(i, steam, callback)
                 Shop.RequestChests(i, steam, callback)
                 Shop.RequestSounds(i, steam, callback)
             end
             CustomPlayerResource:InitPlayer(i)
-            Timers:CreateTimer(25, function() wearables:SetPart() end)
-            Timers:CreateTimer(35, function() SelectPets:SetPets() end)
-            Stats.RequestDataTop10("1", callback)
-            Stats.RequestDataTop10("2", callback)
-            Stats.RequestDataTop10("3", callback)
-            Stats.RequestDataTop10("4", callback)
-     
+ 
         end
     end
-
+    GameRules.PlayersCount = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS) + PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS)
+    Timers:CreateTimer(25, function() wearables:SetPart() end)
+    Timers:CreateTimer(35, function() SelectPets:SetPets() end)
+    Stats.RequestDataTop10("5", callback)
+    Stats.RequestDataTop10("2", callback)
+    Stats.RequestDataTop10("3", callback)
+    Stats.RequestDataTop10("4", callback)
     FightRecap:Init()
 
     --GameMode:SetContextThink("RandomGold",ThinkGoldGuard,0.1)
@@ -754,8 +755,7 @@ function Survival:EndGame(teamWin)
             HeroToPedestal(PlayerResource:GetSelectedHeroEntity( PlayerResource:GetPlayerIdAtPlace(3) ), 3)
         end
         TimeLine:GameEnd()
-        GameRules:SetGameWinner(teamWin)
-        Stats.MatchResult(teamWin == DOTA_TEAM_GOODGUYS)
+        Stats.SubmitMatchData(teamWin, callback)
     end)
 end
 

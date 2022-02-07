@@ -9,7 +9,7 @@
     flow-children: down;
     padding: 10px;
 	
-    transform: translatex( -750px );
+    transform: translatex( -850px );
     transition-property: transform;
     transition-duration: 0.2s;
 
@@ -159,7 +159,9 @@
 #LevelContainer,
 #KillsBossesContainer,
 #KillsCreepsContainer,
-#DeathsContainer
+#DeathsContainer,
+#RatingContainer,
+#RatingContainer2
 {
 	height: 100%;
 	width: 60px;
@@ -173,7 +175,9 @@
 	border-right: 1px solid #00000066;
 }
 
-#RatingContainer
+#RatingContainer,
+#RatingContainer2,
+#RatingContainer3
 {
 	height: 100%;
 	width: 60px;
@@ -236,6 +240,8 @@
 #KillsBosses,
 #Deaths,
 #Rating,
+#Rating2,
+#Rating3,
 #Upd
 {
 	vertical-align: center;
@@ -333,7 +339,9 @@
 .is_local_player #Deaths,
 .is_local_player #Upd,
 .is_local_player #PlayerName,
-.is_local_player #Rating
+.is_local_player #Rating,
+.is_local_player #Rating2,
+.is_local_player #Rating3
 {
 	color: #ffffffff;
 }
@@ -364,6 +372,8 @@
 .ScoreCol_KillsCreeps,
 .ScoreCol_Deaths,
 .ScoreCol_Rating,
+.ScoreCol_Rating2,
+.ScoreCol_Rating3,
 .ScoreCol_Level
 {
 	width: 60px;

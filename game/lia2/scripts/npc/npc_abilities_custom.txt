@@ -29691,4 +29691,32 @@
 	}
 	
 	//End of file water_elemental.txt
+
+	"troll_invis"{
+		"BaseClass"                     "ability_lua"
+		"ScriptFile"				    "abilities/troll_invis"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"clinkz_wind_walk"
+		"AbilityCooldown"				"30"
+		"MaxLevel"						"1"
+
+		"precache"
+		{
+			"soundfile"                     "soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"      	"15"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_movement_speed"	"300"
+			}
+		}
+	}
 }

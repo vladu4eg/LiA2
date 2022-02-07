@@ -22,7 +22,7 @@ function Activate()
 	GameRules.LiA = LiA()
 	GameRules.LiA:InitGameMode()
 end
-
+TROLLNELVES2_DEBUG_SPEW = true
 
 RegisterCustomAnimationScriptForModel("models/heroes/axe/axe.vmdl", "animation/axe.lua")
 
@@ -219,11 +219,14 @@ function Precache( context )
 
 		PrecacheLoad:PrecacheLoad (context)
 
-		GameRules.isTesting = false
-		GameRules.server =   "https://tve3.us/lia2/"  -- "https://localhost:5001/test/" -- 
+		GameRules.isTesting = true
+		GameRules.server =   "https://tve3.us/lia/"  -- "https://localhost:5001/test/" -- 
 
 		GameRules.Bonus = {}
 		GameRules.PartDefaults = {}
 		GameRules.PetsDefaults = {}
 		GameRules.scores = {} 
+		GameRules.BonusPercent = 0
+		GameRules.PlayersCount = 0
+		GameRules.Score = {}
 end

@@ -130,17 +130,16 @@ function Pets:OnThink()
 		end
 		if owner:HasModifier("modifier_generic_invisibility") then
         local invisModifier = owner:FindModifierByName("modifier_generic_invisibility")
-		local check = true
         if invisModifier then
             local remainingTime = invisModifier:GetRemainingTime()
-            pet:AddNewModifier(pet,nil,"modifier_generic_invisibility",{duration=remainingTime})
+            pet:AddNewModifier(pet,nil,"modifier_generic_invisibility",{duration=remainingTime+1})
         end
 		end
 		if owner:HasModifier("modifier_invisible") then
         local invisModifier = owner:FindModifierByName("modifier_invisible")
         if invisModifier then
             local remainingTime = invisModifier:GetRemainingTime()
-            pet:AddNewModifier(pet,nil,"modifier_invisible",{duration=remainingTime})
+            pet:AddNewModifier(pet,nil,"modifier_invisible",{duration=remainingTime+1})
         end
 		end
 	end

@@ -404,6 +404,9 @@
 #KillsCreepsContainer,
 #DeathsContainer,
 #RatingContainer,
+#RatingContainer2,
+#RatingContainer3,
+#RatingContainerEnd,
 #AssistsContainer,
 #UpdContainer
 {
@@ -456,6 +459,9 @@
 #KillsBosses,
 #Deaths,
 #Rating,
+#Rating2,
+#Rating3,
+#RatingEnd,
 #Upd,
 #Assists,
 #PlayerGoldAmount
@@ -551,6 +557,9 @@
 .ScoreCol_KillsCreeps,
 .ScoreCol_Deaths,
 .ScoreCol_Rating,
+.ScoreCol_RatingEnd,
+.ScoreCol_Rating2,
+.ScoreCol_Rating3,
 .ScoreCol_Level,
 .ScoreCol_Assists
 {

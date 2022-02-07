@@ -28,7 +28,7 @@ function top:OnLoadTop(list, idTop)
 					id = list[i].steamID,
 					col = list[i].score
 				}
-				if idTop == "1" then
+				if idTop == "5" then
 					table.insert(PlaysTopList,kv)
 					elseif idTop == "2" then
 					table.insert(WinsTopList,kv)

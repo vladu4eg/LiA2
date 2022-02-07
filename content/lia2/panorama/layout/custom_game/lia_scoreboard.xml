@@ -21,6 +21,8 @@
 			<Label class="LegendPanel ScoreCol_Upd" text="#ScoreCol_Upd" />
 			<Label class="LegendPanel ScoreCol_Deaths" text="#ScoreCol_Deaths" />
 			<Label class="LegendPanel ScoreCol_Rating" text="#ScoreCol_Rating" />
+			<Label class="LegendPanel ScoreCol_Rating2" text="#ScoreCol_Rating2" />
+			<Label class="LegendPanel ScoreCol_Rating3" text="#ScoreCol_Rating3" />
 		</Panel>
 		<Panel id="TeamsContainer" /> 
     </Panel>

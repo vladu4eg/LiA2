@@ -43,7 +43,7 @@ LinkLuaModifier( "modifier_knockback_lia", "abilities/modifiers/modifier_knockba
 LinkLuaModifier( "modifier_archmage_polymorph_lua", "heroes/Archmage/modifier_archmage_polymorph_lua.lua", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier( "modifier_item_shield_of_death_armor", "items/modifier_item_shield_of_death_armor.lua", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier( "modifier_demonologist_riual_of_summoning_status_effect", "heroes/Demonologist/modifier_demonologist_riual_of_summoning_status_effect.lua", LUA_MODIFIER_MOTION_NONE)
-
+LinkLuaModifier("part_mod", "modifiers/parts/part_mod", LUA_MODIFIER_MOTION_NONE )
 ------------------------------------------------------------------------------
 
 if LiA == nil then
@@ -189,12 +189,13 @@ function LiA:InitGameMode()
 	GameRules.Damage = LoadKeyValues("scripts/kv/damage_table.kv")
 
 	Upgrades:Init() 
+    Pets:Init()
 end
 
  -- Debugging setup
  local spew = 0
  if TROLLNELVES2_DEBUG_SPEW then
-   spew = 1
+   
  end
  Convars:RegisterConvar('lia2_spew', tostring(spew), 'Set to 1 to start spewing lia debug info.  Set to 0 to disable.', 0)
 

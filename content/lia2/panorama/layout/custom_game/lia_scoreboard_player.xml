@@ -58,7 +58,12 @@
 			<Panel id="RatingContainer" class="ScoreCol_Rating ScoreboardPanel">
 				<Label id="Rating" text="0" />
 			</Panel>
-			
+			<Panel id="RatingContainer2" class="ScoreCol_Rating2 ScoreboardPanel">
+				<Label id="Rating2" text="0" />
+			</Panel>
+			<Panel id="RatingContainer3" class="ScoreCol_Rating3 ScoreboardPanel">
+				<Label id="Rating3" text="0" />
+			</Panel>
 			
 		</Panel>
 	</Panel>

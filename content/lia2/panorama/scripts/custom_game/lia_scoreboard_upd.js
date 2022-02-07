@@ -37,6 +37,8 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 	
 
 	var customPlayerInfo = CustomNetTables.GetTableValue("lia_player_table", "Player"+playerId)
+	var playerStatsScore = CustomNetTables.GetTableValue("scorestats",playerId.toString());
+
 
 	var playerPanelName = "_dynamic_player_" + playerId;
 	var playerPanel = playersContainer.FindChild( playerPanelName );
@@ -75,8 +77,11 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 		_ScoreboardUpdater_SetTextSafe( playerPanel, "KillsBosses", customPlayerInfo.killedBosses );
 		_ScoreboardUpdater_SetTextSafeToFixed( playerPanel, "Upd", customPlayerInfo.lumberSpent/333*100 );
 		_ScoreboardUpdater_SetTextSafe( playerPanel, "Deaths", customPlayerInfo.heroDeaths );
-		_ScoreboardUpdater_SetTextSafe( playerPanel, "Rating", customPlayerInfo.rating );
-		
+		_ScoreboardUpdater_SetTextSafe( playerPanel, "Rating", playerStatsScore.playerScoreEasy );
+		_ScoreboardUpdater_SetTextSafe( playerPanel, "Rating2", playerStatsScore.playerScoreNormal );
+		_ScoreboardUpdater_SetTextSafe( playerPanel, "Rating3", playerStatsScore.playerScoreHard );
+		_ScoreboardUpdater_SetTextSafe( playerPanel, "RatingEnd", playerStatsScore.playerScoreEnd );
+
 		var playerPortrait = playerPanel.FindChildInLayoutFile( "HeroIcon" );
 		if ( playerPortrait )
 		{
@@ -195,6 +200,7 @@ function ScoreboardUpdater_InitializeScoreboard( scoreboardConfig, scoreboardPan
 	}
 	//$.Msg( "                  ScoreboardUpdater_InitializeScoreboard: ", scoreboardConfig );
 	//_ScoreboardUpdater_UpdateAllPlayers( scoreboardConfig, scoreboardPanel );
+	
 	
 	return { "scoreboardConfig": scoreboardConfig, "scoreboardPanel" : scoreboardPanel }
 }

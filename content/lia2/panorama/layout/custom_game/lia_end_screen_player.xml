@@ -33,10 +33,10 @@
 			</Panel>
 			
 			<Panel id="DeathsContainer" class="ScoreCol_Deaths ScoreboardPanel">
-				<Label id="Deaths" text="0" />
+				<Label id="Deaths" text="0" /> 
 			</Panel>
-			<Panel id="RatingContainer" class="ScoreCol_Rating ScoreboardPanel">
-				<Label id="Rating" text="0" />
+			<Panel id="RatingContainerEnd" class="ScoreCol_RatingEnd ScoreboardPanel">
+				<Label id="RatingEnd" text="0" />
 			</Panel>
 			
 			<Panel id="PlayerItemsContainer" class="ScoreCol_Items ScoreboardPanel" >

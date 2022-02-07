@@ -39,7 +39,6 @@
 	"ScoreCol_KillsCreeps"							"击杀怪物"
 	"ScoreCol_Level"								"等级"
 	"ScoreCol_Deaths"								"死亡"
-	"ScoreCol_Rating"								"评分"
 	
 	"welcome"		"欢迎来到死亡竞技场!"
 	"target"		"目标:"

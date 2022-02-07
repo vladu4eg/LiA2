@@ -46,7 +46,7 @@
 	"ScoreCol_Level"								"Уровень"
 	"ScoreCol_Upd"								"Улучшения %"
 	"ScoreCol_Deaths"								"Смертей"
-	"ScoreCol_Rating"								"Рейтинг"
+
 	
 	"end_screen_victory"		"ВЫ ВЫИГРАЛИ !"
 	"end_screen_lose"		"ВЫ ПРОИГРАЛИ !"

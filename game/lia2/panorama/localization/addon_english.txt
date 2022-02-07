@@ -46,8 +46,9 @@
 	"ScoreCol_Level"								"Level"
 	"ScoreCol_Upd"								"Upgrades %"
 	"ScoreCol_Deaths"								"Deaths"
-	"ScoreCol_Rating"								"Score"
-	
+	"ScoreCol_Rating"								"Easy"
+	"ScoreCol_Rating2"								"Normal"
+	"ScoreCol_Rating3"								"Hard"
 	"end_screen_victory"		"YOU WIN !"
 	"end_screen_lose"		"YOU LOSE !"
 
