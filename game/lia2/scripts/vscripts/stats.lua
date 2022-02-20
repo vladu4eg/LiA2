@@ -110,7 +110,7 @@ function Stats.SubmitMatchData(winner,callback)
 				data.BonusPercent = tostring(GameRules.BonusPercent)
 				local text = tostring(PlayerResource:GetPlayerName(pID)) .. " got " .. data.Score
 				GameRules.Score[pID] = data.Score
-				CustomNetTables:SetTableValue("scorestats", tostring(pId), { playerScoreEasy = tostring(GameRules.scores[pID].easy), 
+				CustomNetTables:SetTableValue("scorestats", tostring(pID), { playerScoreEasy = tostring(GameRules.scores[pID].easy), 
 																	playerScoreNormal = tostring(GameRules.scores[pID].normal), 
 																	playerScoreHard = tostring(GameRules.scores[pID].hard),
 																	playerScoreEnd = tostring(data.Score)})

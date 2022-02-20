@@ -9,7 +9,9 @@ _G.SURVIVAL_STATE_DUEL_TIME = 6
 _G.SURVIVAL_STATE_POST_GAME = 7
 
 _G.WAVE_SPAWN_COORD_LEFT    = Vector(-1770,  1177, 0)
+_G.WAVE_SPAWN_COORD_LEFT_2    = Vector(6000,  1100, 0)
 _G.WAVE_SPAWN_COORD_TOP     = Vector(108,  3068, 0) 
+_G.WAVE_SPAWN_COORD_TOP_2     = Vector(8250,  3300, 0) 
 _G.ARENA_TELEPORT_COORD_TOP = Vector(-7, -2004, 0)
 _G.ARENA_TELEPORT_COORD_BOT = Vector(-7, -3050, 0)
 _G.ARENA_CENTER_COORD       = Vector(-7, -2506, 0)
@@ -49,6 +51,7 @@ function Survival:InitSurvival()
     _G.WORLD_BOUNDS_MAX = Entities:FindByName(nil, "world_bounds_max"):GetAbsOrigin()
     _G.ARENA_TOP_RIGHT_CORNER = Entities:FindByName(nil, "arena_top_right_corner"):GetAbsOrigin()
     _G.ARENA_LEFT_BOTTOM_CORNER = Entities:FindByName(nil, "arena_left_bottom_corner"):GetAbsOrigin()
+    
     _G.BOSS_ARENA_CENTER = Entities:FindByName(nil, "boss_arena_center"):GetAbsOrigin()
 
     self.tHeroes = {}
@@ -136,9 +139,13 @@ function Survival:InitSurvival()
     if not self.hHealer then 
         print("Survival: Cant find lia_trigger_healer")
     end
-
+    if GetMapName() == "lia_8_clans" then
+        _G.ARENA_LEFT_BOTTOM_CORNER_2 = Entities:FindByName(nil, "arena_left_bottom_corner_2"):GetAbsOrigin()
+        _G.ARENA_TOP_RIGHT_CORNER_2 = Entities:FindByName(nil, "arena_top_right_corner_2"):GetAbsOrigin()
+    end
     SetRuneSpawnRegion("rectangle",ARENA_LEFT_BOTTOM_CORNER,ARENA_TOP_RIGHT_CORNER)
     StartRunesSpawn()
+    
 
     for i = 0, DOTA_MAX_PLAYERS-1 do
         if PlayerResource:IsValidTeamPlayerID(i) then
@@ -537,7 +544,7 @@ function Survival:_SpawnMegaboss()
     boss:AddNewModifier(boss, nil, "modifier_stun_lua", {duration = 5})
 end
 
-function Survival:_SpawnWave()  
+function Survival:_SpawnWave(loc_left, loc_top)  
     print("Spawn wave", self.nRoundNum, "for", self:GetHeroCount(false), "heroes")
 	--AIcreeps
     Survival:AICreepsDefault()
@@ -564,8 +571,8 @@ function Survival:_SpawnWave()
 
     Timers:CreateTimer(RandomFloat(tick*2,all_time),
         function()
-            boss1 = CreateUnitByName(bossName, WAVE_SPAWN_COORD_LEFT + RandomVector(RandomInt(-500, 500)), true, nil, nil, DOTA_TEAM_NEUTRALS)
-            boss2 = CreateUnitByName(bossName, WAVE_SPAWN_COORD_TOP  + RandomVector(RandomInt(-500, 500)), true, nil, nil, DOTA_TEAM_NEUTRALS)
+            boss1 = CreateUnitByName(bossName, loc_left + RandomVector(RandomInt(-500, 500)), true, nil, nil, DOTA_TEAM_NEUTRALS)
+            boss2 = CreateUnitByName(bossName, loc_top  + RandomVector(RandomInt(-500, 500)), true, nil, nil, DOTA_TEAM_NEUTRALS)
             ParticleManager:CreateParticle(pathEffect, PATTACH_ABSORIGIN, boss1)
             ParticleManager:CreateParticle(pathEffect, PATTACH_ABSORIGIN, boss2)
             boss1:EmitSound("DOTA_Item.BlinkDagger.Activate")
@@ -592,8 +599,8 @@ function Survival:_SpawnWave()
     --
     Timers:CreateTimer(tick,
         function()
-            unit1 = CreateUnitByName(creepName, WAVE_SPAWN_COORD_LEFT + RandomVector(RandomInt(-500, 500)), true, nil, nil, DOTA_TEAM_NEUTRALS)
-            unit2 = CreateUnitByName(creepName, WAVE_SPAWN_COORD_TOP  + RandomVector(RandomInt(-500, 500)), true, nil, nil, DOTA_TEAM_NEUTRALS)
+            unit1 = CreateUnitByName(creepName, loc_left + RandomVector(RandomInt(-500, 500)), true, nil, nil, DOTA_TEAM_NEUTRALS)
+            unit2 = CreateUnitByName(creepName, loc_top  + RandomVector(RandomInt(-500, 500)), true, nil, nil, DOTA_TEAM_NEUTRALS)
             --
             ParticleManager:CreateParticle(pathEffect, PATTACH_ABSORIGIN, unit1)
             ParticleManager:CreateParticle(pathEffect, PATTACH_ABSORIGIN, unit2)
@@ -696,7 +703,10 @@ function Survival:StartRound()
                     end
                 )
             else -- обычная волна
-                Survival:_SpawnWave()
+                Survival:_SpawnWave(WAVE_SPAWN_COORD_LEFT, WAVE_SPAWN_COORD_TOP)
+                if GetMapName() == "lia_8_clans" then
+                    Survival:_SpawnWave(WAVE_SPAWN_COORD_LEFT_2, WAVE_SPAWN_COORD_TOP_2)
+                end 
             end
         end
     ) 

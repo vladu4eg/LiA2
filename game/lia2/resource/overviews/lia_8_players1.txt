@@ -1,0 +1,8 @@
+lia_8_players1
+{
+	material materials/overviews/lia_8_players1.vmat
+	pos_x -2196
+	pos_y 6110
+	scale 12.266
+}
+

@@ -13,7 +13,7 @@ runeTypes = {
 	item_lia_rune_lumber = 0.5, --эта руна будет появляться в два раза реже руны с значением 1
 }
 
-runeSpawnTime = 60 --период появления рун
+runeSpawnTime = 45 --период появления рун 45
 Q = 1
 
 runesSpawnChanceSumm = 0
@@ -41,8 +41,14 @@ function GetRuneSpawnPos()
 end
 
 function SpawnRune()
+    SetRuneSpawnRegion("rectangle",ARENA_LEFT_BOTTOM_CORNER,ARENA_TOP_RIGHT_CORNER)
 	local rune = CreateItem(GetRandomRuneType(), nil, nil)
 	CreateItemOnPositionSync(GetRuneSpawnPos(), rune)
+	if GetMapName() == "lia_8_clans" then
+        SetRuneSpawnRegion("rectangle",ARENA_LEFT_BOTTOM_CORNER_2,ARENA_TOP_RIGHT_CORNER_2)
+		local rune2 = CreateItem(GetRandomRuneType(), nil, nil)
+		CreateItemOnPositionSync(GetRuneSpawnPos(), rune2)
+    end
 end
 
 function StartRunesSpawn()

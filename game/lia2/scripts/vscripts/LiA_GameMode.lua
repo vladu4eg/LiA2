@@ -112,8 +112,19 @@ function LiA:InitGameMode()
     GameRules:LockCustomGameSetupTeamAssignment(true)
     GameRules:SetCustomGameSetupRemainingTime(0)
     GameRules:SetCustomGameSetupAutoLaunchDelay(0)
-    GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 8 )
-    GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 0 )
+
+    -- Adding Many Players
+	if GetMapName() == "lia_8_clans" then
+        GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 0 )
+		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 1 )
+		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_1, 1 )
+    else
+        GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 8 )
+        GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 0 )
+        GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_1, 0 )
+    end
+
+    
 
     GameRules:SetTimeOfDay(0.5)
     GameMode:SetDaynightCycleDisabled(true)

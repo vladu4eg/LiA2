@@ -229,4 +229,6 @@ function Precache( context )
 		GameRules.BonusPercent = 0
 		GameRules.PlayersCount = 0
 		GameRules.Score = {}
+		
+
 end
