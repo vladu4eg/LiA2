@@ -365,7 +365,7 @@ DOTAHudPreGame.StartPregameIntro #NameContainer
 }
 
 
-.PlayerInControl ##NameContainer > Label
+.PlayerInControl #NameContainer > Label
 {
 	color: #dddddd;
 }

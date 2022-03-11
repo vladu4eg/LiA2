@@ -492,7 +492,7 @@ function ToggleShop() {
 function InitShop() {
 
 	$("#TrollChance").SetPanelEvent('onmouseover', function() {
-	    $.DispatchEvent('DOTAShowTextTooltip', $("#TrollChance"), $.Localize( "shop_trollchance" ) + player_table[2][0] + "%<br>" + $.Localize( "shop_trollchance_date") + player_table[2][1]); 
+	    $.DispatchEvent('DOTAShowTextTooltip', $("#TrollChance"), $.Localize( "#shop_trollchance" ) + player_table[2][0] + "%<br>" + $.Localize( "#shop_trollchance_date") + player_table[2][1]); 
 	});
 	    
 	$("#TrollChance").SetPanelEvent('onmouseout', function() {
@@ -500,7 +500,7 @@ function InitShop() {
 	});
 
 	$("#BonusRate").SetPanelEvent('onmouseover', function() {
-    $.DispatchEvent('DOTAShowTextTooltip', $("#BonusRate"), $.Localize( "shop_bonusrate" ) + player_table[3][0] + "%<br>" + $.Localize( "shop_bonusrate_date") + player_table[3][1]); });
+    $.DispatchEvent('DOTAShowTextTooltip', $("#BonusRate"), $.Localize( "#shop_bonusrate" ) + player_table[3][0] + "%<br>" + $.Localize( "#shop_bonusrate_date") + player_table[3][1]); });
     
 	$("#BonusRate").SetPanelEvent('onmouseout', function() {
 	    $.DispatchEvent('DOTAHideTextTooltip', $("#BonusRate"));
@@ -697,7 +697,7 @@ function CreateChestInInventory(panel, table, i) {
 	
 			var CountChest = $.CreatePanel("Label", item_chest, "CountChest");
 			CountChest.AddClass("CountChest");
-			CountChest.text = $.Localize( "shop_chest_count" ) + " " + player_table[4][chest][2]
+			CountChest.text = $.Localize( "#shop_chest_count" ) + " " + player_table[4][chest][2]
 	
 			var OpenChestPanel = $.CreatePanel("Panel", item_chest, "OpenChestPanel");
 			OpenChestPanel.AddClass("OpenChestPanel");
@@ -707,7 +707,7 @@ function CreateChestInInventory(panel, table, i) {
 	
 			var PriceLabel = $.CreatePanel("Label", ItemPrice, "PriceLabel");
 			PriceLabel.AddClass("PriceLabel");
-			PriceLabel.text = $.Localize( "shop_open" )
+			PriceLabel.text = $.Localize( "#shop_open" )
 	
 		}
 	}
@@ -748,7 +748,7 @@ function CreateItemInInventory(panel, table, i) {
 
 			var PriceLabel = $.CreatePanel("Label", ItemPrice, "PriceLabel");
 			PriceLabel.AddClass("PriceLabel");
-			PriceLabel.text = $.Localize( "shop_activate" )
+			PriceLabel.text = $.Localize( "#shop_activate" )
 
 			UpdateItemActivate(table[i][0])	
 		}
@@ -824,7 +824,7 @@ function CreateItemInMain(panel, table, i) {
        	if (item == table[i][0]) {
        		Recom_item.SetPanelEvent("onactivate", function() {} );
 			BuyItemPanel.style.backgroundColor = "gray"
-			PriceLabel.text = $.Localize( "shop_bought" )
+			PriceLabel.text = $.Localize( "#shop_bought" )
 			PriceIcon.DeleteAsync( 0 );
        	}
     }
@@ -942,14 +942,14 @@ function CreateItemInShop(panel, table, i) {
 		{
 			Recom_item.SetPanelEvent("onactivate", function() {} );
 			BuyItemPanel.style.backgroundColor = "Indigo"
-			PriceLabel.text = $.Localize( "shop_gold" )
+			PriceLabel.text = $.Localize( "#shop_gold" )
 			PriceIcon.DeleteAsync( 0 );
 		}
 		else if(table[i][2] == "99999999")
 		{
 			Recom_item.SetPanelEvent("onactivate", function() {} );
 			BuyItemPanel.style.backgroundColor = "SlateBlue"
-			PriceLabel.text = $.Localize( "shop_event" )
+			PriceLabel.text = $.Localize( "#shop_event" )
 			PriceIcon.DeleteAsync( 0 );
 		}
 		for ( var item in player_table[1] )
@@ -957,7 +957,7 @@ function CreateItemInShop(panel, table, i) {
 			   if (item == table[i][0]) {
 				   Recom_item.SetPanelEvent("onactivate", function() {} );
 				BuyItemPanel.style.backgroundColor = "gray"
-				PriceLabel.text = $.Localize( "shop_bought" )
+				PriceLabel.text = $.Localize( "#shop_bought" )
 				PriceIcon.DeleteAsync( 0 );
 			   }
 		}
@@ -1081,7 +1081,7 @@ function SetItemBuyFunction(panel, table){
 
 		var PriceLabel = $.CreatePanel("Label", BuyItemPanel, "PriceLabel");
 		PriceLabel.AddClass("PriceLabelInfo");
-		PriceLabel.text = $.Localize( "shop_buy" )
+		PriceLabel.text = $.Localize( "#shop_buy" )
 
 		BuyItemPanel.SetPanelEvent("onactivate", function() { BuyItemFunction(panel, table); CloseItemInfo(); } );
 
@@ -1139,11 +1139,11 @@ function SelectCourier(num)
 
     	for (var i = 0; i < $("#CouriersPanel").GetChildCount(); i++) {
     		$("#CouriersPanel").GetChild(i).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ))"
-        	$("#CouriersPanel").GetChild(i).FindChildTraverse("PriceLabel").text = $.Localize( "shop_activate" )
+        	$("#CouriersPanel").GetChild(i).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_activate" )
     	} 
 
     	$("#item_inventory_"+num).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #84302C ), to( #60321D ))"
-        $("#item_inventory_"+num).FindChildTraverse("PriceLabel").text = $.Localize( "shop_deactivate" )
+        $("#item_inventory_"+num).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_deactivate" )
         GameEvents.SendCustomGameEventToServer( "SelectPets", { id: Players.GetLocalPlayer(),part:num, offp:false, name:num } );
         courier_selected = num;
 		GameEvents.SendCustomGameEventToServer( "SetDefaultPets", { id: Players.GetLocalPlayer(),part:String(courier_selected)} );
@@ -1151,7 +1151,7 @@ function SelectCourier(num)
     else
     {
     	$("#item_inventory_"+courier_selected).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ))"
-        $("#item_inventory_"+courier_selected).FindChildTraverse("PriceLabel").text = $.Localize( "shop_activate" )
+        $("#item_inventory_"+courier_selected).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_activate" )
         GameEvents.SendCustomGameEventToServer( "SelectPets", { id: Players.GetLocalPlayer(),part:num, offp:true, name:num } );
         courier_selected = null;
 		GameEvents.SendCustomGameEventToServer( "SetDefaultPets", { id: Players.GetLocalPlayer(),part:"0"} );
@@ -1171,11 +1171,11 @@ function SelectParticle(num)
 
     	for (var i = 0; i < $("#EffectsPanel").GetChildCount(); i++) {
     		$("#EffectsPanel").GetChild(i).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ))"
-        	$("#EffectsPanel").GetChild(i).FindChildTraverse("PriceLabel").text = $.Localize( "shop_activate" )
+        	$("#EffectsPanel").GetChild(i).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_activate" )
     	} 
 
     	$("#item_inventory_"+num).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #84302C ), to( #60321D ))"
-        $("#item_inventory_"+num).FindChildTraverse("PriceLabel").text = $.Localize( "shop_deactivate" )
+        $("#item_inventory_"+num).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_deactivate" )
 		numPart = Number(num)-100
         GameEvents.SendCustomGameEventToServer( "SelectPart", { id: Players.GetLocalPlayer(),part:String(numPart), offp:false, name:String(numPart) } );
         particle_selected = num;
@@ -1184,7 +1184,7 @@ function SelectParticle(num)
     else
     {
     	$("#item_inventory_"+particle_selected).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ))"
-        $("#item_inventory_"+particle_selected).FindChildTraverse("PriceLabel").text = $.Localize( "shop_activate" )
+        $("#item_inventory_"+particle_selected).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_activate" )
         GameEvents.SendCustomGameEventToServer( "SelectPart", { id: Players.GetLocalPlayer(),part:String(numPart) , offp:true, name:String(numPart)  } );
         particle_selected = null;
 		GameEvents.SendCustomGameEventToServer( "SetDefaultPart", { id: Players.GetLocalPlayer(),part:"0"} );
@@ -1200,11 +1200,11 @@ function SelectSkin(num)
 
     	for (var i = 0; i < $("#SkinPanel").GetChildCount(); i++) {
     		$("#SkinPanel").GetChild(i).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ))"
-        	$("#SkinPanel").GetChild(i).FindChildTraverse("PriceLabel").text = $.Localize( "shop_activate" )
+        	$("#SkinPanel").GetChild(i).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_activate" )
     	} 
 
     	$("#item_inventory_"+num).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #84302C ), to( #60321D ))"
-        $("#item_inventory_"+num).FindChildTraverse("PriceLabel").text = $.Localize( "shop_deactivate" )
+        $("#item_inventory_"+num).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_deactivate" )
         GameEvents.SendCustomGameEventToServer( "SelectSkin", { id: Players.GetLocalPlayer(),part:String(num), offp:false, name:String(num) } );
         skin_selected = num;
 		GameEvents.SendCustomGameEventToServer( "SetDefaultSkin", { id: Players.GetLocalPlayer(),part:String(num)} );
@@ -1212,7 +1212,7 @@ function SelectSkin(num)
     else
     {
     	$("#item_inventory_"+skin_selected).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ))"
-        $("#item_inventory_"+skin_selected).FindChildTraverse("PriceLabel").text = $.Localize( "shop_activate" )
+        $("#item_inventory_"+skin_selected).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_activate" )
         GameEvents.SendCustomGameEventToServer( "SelectSkin", { id: Players.GetLocalPlayer(),part:String(num) , offp:true, name:String(num)  } );
         skin_selected = null;
 		GameEvents.SendCustomGameEventToServer( "SetDefaultSkin", { id: Players.GetLocalPlayer(),part:"0"} );
@@ -1237,7 +1237,7 @@ function BuyItemFunction(panel, table) {
 		SetMainCurrency()
 		panel.SetPanelEvent("onactivate", function() {} );
 		panel.FindChildTraverse("BuyItemPanel").style.backgroundColor = "gray"
-		panel.FindChildTraverse("PriceLabel").text = $.Localize( "shop_bought" )
+		panel.FindChildTraverse("PriceLabel").text = $.Localize( "#shop_bought" )
 		panel.FindChildTraverse("PriceIcon").DeleteAsync( 0 );
 		ShopBuy("shop_nice_buy")
 	} 
@@ -1333,14 +1333,14 @@ function UpdateItemActivate(id) {
 		if (id == courier_selected)
 		{
     		$("#item_inventory_"+id).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #84302C ), to( #60321D ))"
-        	$("#item_inventory_"+id).FindChildTraverse("PriceLabel").text = $.Localize( "shop_deactivate" )
+        	$("#item_inventory_"+id).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_deactivate" )
         }
 	}
 	if (particle_selected !== null) {
 		if (id == particle_selected)
 		{
     		$("#item_inventory_"+id).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #84302C ), to( #60321D ))"
-        	$("#item_inventory_"+id).FindChildTraverse("PriceLabel").text = $.Localize( "shop_deactivate" )
+        	$("#item_inventory_"+id).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_deactivate" )
         }			
 	}
 }
@@ -1384,7 +1384,7 @@ function SetOpenChestPanel(panel, table){
 
 		var OpenChest_Label = $.CreatePanel("Label", OpenChestButton, "OpenChest_Label");
 		OpenChest_Label.AddClass("OpenChest_Label");
-		OpenChest_Label.text = $.Localize( "shop_open" )
+		OpenChest_Label.text = $.Localize( "#shop_open" )
 
 		for (var i = 0; i < Items_sounds.length; i++) {
 			CreateItemInChest(ChestAllRewardsPanel, Items_sounds, i, table)
@@ -1511,7 +1511,7 @@ function RewardRequest(data) {
 	
 	var LabelAccept = $.CreatePanel("Label", AcceptButton, "LabelAccept");
 	LabelAccept.AddClass("LabelAccept");
-	LabelAccept.text = $.Localize( "shop_accept" )
+	LabelAccept.text = $.Localize( "#shop_accept" )
  
  	// Если нужно что-то передать в закрытие сундука всунь это в closechest
 	AcceptButton.SetPanelEvent("onactivate", function() { CloseChest(); } );
@@ -1537,7 +1537,7 @@ function CreateItemInChest(panel, table, i, table_chest) {
 				var Chest_in_item = $.CreatePanel("Panel", panel, "item_" + table_chest[5][chest_items][0]);
 				Chest_in_item.AddClass("Chest_in_item");
 
-				CreateItemChance(Chest_in_item, $.Localize("shop_chance") + " " + table_chest[5][chest_items][1] + "%")
+				CreateItemChance(Chest_in_item, $.Localize("#"+"shop_chance") + " " + table_chest[5][chest_items][1] + "%")
 
 			
 				var ItemImage = $.CreatePanel("Panel", Chest_in_item, "");
@@ -1610,7 +1610,7 @@ function CreateItemInChestPreview(panel, table, i, table_chest) {
 				var Chest_in_item = $.CreatePanel("Panel", panel, "item_" + table_chest[5][chest_items][0]);
 				Chest_in_item.AddClass("Chest_in_item_preview");
 
-				CreateItemChance(Chest_in_item, $.Localize("shop_chance") + " " + table_chest[5][chest_items][1] + "%")
+				CreateItemChance(Chest_in_item, $.Localize("#"+"shop_chance") + " " + table_chest[5][chest_items][1] + "%")
 
 			
 				var ItemImage = $.CreatePanel("Panel", Chest_in_item, "");
@@ -1666,7 +1666,7 @@ function CreateItemCurrencyPreview(panel, currency, count, chance) {
 	var Chest_in_item = $.CreatePanel("Panel", panel, "item_" + currency);
 	Chest_in_item.AddClass("Chest_in_item_preview");
 
-	CreateItemChance(Chest_in_item, $.Localize("shop_chance") + " " + chance + "%<br>" + $.Localize("shop_currency_count") + " " + $.Localize("shop_currency_count_from") + " " + count[0] + " " + $.Localize("shop_currency_count_to") + " " + count[1])
+	CreateItemChance(Chest_in_item, $.Localize("#"+"shop_chance") + " " + chance + "%<br>" + $.Localize("shop_currency_count") + " " + $.Localize("#"+"shop_currency_count_from") + " " + count[0] + " " + $.Localize("#"+"shop_currency_count_to") + " " + count[1])
 
 	var ItemImage = $.CreatePanel("Panel", Chest_in_item, "");
 	ItemImage.AddClass("ItemChestImage_preview");
@@ -1679,7 +1679,7 @@ function CreateItemCurrencyPreview(panel, currency, count, chance) {
 
 	var ItemName = $.CreatePanel("Label", RarePanel, "ItemName");
 	ItemName.AddClass("ItemChestName_preview");
-	ItemName.text = $.Localize( "shop_currency_" + currency)
+	ItemName.text = $.Localize( "#shop_currency_" + currency)
 }
 
 
@@ -1711,7 +1711,7 @@ function CreateItemCurrency(panel, currency, count, chance) {
 	var Chest_in_item = $.CreatePanel("Panel", panel, "item_" + currency);
 	Chest_in_item.AddClass("Chest_in_item");
 
-	CreateItemChance(Chest_in_item, $.Localize("shop_chance") + " " + chance + "%<br>" + $.Localize("shop_currency_count") + " " + $.Localize("shop_currency_count_from") + " " + count[0] + " " + $.Localize("shop_currency_count_to") + " " + count[1])
+	CreateItemChance(Chest_in_item, $.Localize("#"+"shop_chance") + " " + chance + "%<br>" + $.Localize("#"+"shop_currency_count") + " " + $.Localize("#"+"shop_currency_count_from") + " " + count[0] + " " + $.Localize("#"+"shop_currency_count_to") + " " + count[1])
 
 	var ItemImage = $.CreatePanel("Panel", Chest_in_item, "");
 	ItemImage.AddClass("ItemChestImage");
@@ -1724,7 +1724,7 @@ function CreateItemCurrency(panel, currency, count, chance) {
 
 	var ItemName = $.CreatePanel("Label", RarePanel, "ItemName");
 	ItemName.AddClass("ItemChestName");
-	ItemName.text = $.Localize( "shop_currency_" + currency)
+	ItemName.text = $.Localize( "#shop_currency_" + currency)
 }
 
 

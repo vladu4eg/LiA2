@@ -117,7 +117,7 @@ function InitLevel() {
 		let level = GetLevelPlayer(player_bp_info[0])
 		let get_current_exp = GetExpPlayer(player_bp_info[0])
 
-		$("#LevelText").text = $.Localize("battlepass_level") + ":" + " " + level
+		$("#LevelText").text = $.Localize("#"+"battlepass_level") + ":" + " " + level
      
 		let width = 0
 
@@ -161,7 +161,7 @@ function CreateLevels(reward_level, lvl){
 
 	var LevelTextPanel = $.CreatePanel("Label", LevelPanelCenter, "LevelTextPanel");
 	LevelTextPanel.AddClass("LevelTextPanel");
-	LevelTextPanel.text = $.Localize( "battlepass_level") + " " + reward_level
+	LevelTextPanel.text = $.Localize( "#battlepass_level") + " " + reward_level
 }
 
 function CreateFreeReward(reward_level, lvl){
@@ -214,12 +214,12 @@ function CreateFreeReward(reward_level, lvl){
 
 		if (lvl >= reward_level) {
 			if (reward_no_recieve) {
-				BpLockedText.text = $.Localize( "battleshop_gives" )
+				BpLockedText.text = $.Localize( "#battleshop_gives" )
 			} else {
-				BpLockedText.text = $.Localize( "battlepass_gives" )
+				BpLockedText.text = $.Localize( "#battlepass_gives" )
 			}
 		} else {
-			BpLockedText.text = $.Localize( "battleshop_locked" )
+			BpLockedText.text = $.Localize( "#battleshop_locked" )
 			RewardImage.style.brightness = "0.05"
 		}
 
@@ -232,7 +232,7 @@ function CreateFreeReward(reward_level, lvl){
 
 		var BpDonateText = $.CreatePanel("Label", DonateInfo, "BpDonateText");
 		BpDonateText.AddClass("BpDonateText");
-		BpDonateText.text = $.Localize( "battlepass_free" )
+		BpDonateText.text = $.Localize( "#battlepass_free" )
 	} else {
 		var RewardPanelFree = $.CreatePanel("Panel", $("#BattlePass_Free"), "RewardPanelFree" + reward_level );
 		RewardPanelFree.AddClass("RewardPaneClear");	
@@ -247,7 +247,7 @@ function GiveReward(id, panel) {
 	panel.SetPanelEvent("onactivate", function() {} );
 	panel.RemoveClass("PanelLock")
 	panel.AddClass("PanelGives");
-	panel.FindChildTraverse("BpLockedText").text = $.Localize("battlepass_gives")
+	panel.FindChildTraverse("BpLockedText").text = $.Localize("#"+"battlepass_gives")
 	panel.FindChildTraverse("BpLockedText").style.textTransform = "uppercase"
 
 	// Здесь нужно отправить в луа проверку на получение шмотки  id - айди шмотки
@@ -309,12 +309,12 @@ function CreateDonateReward(reward_level, lvl) {
 
 		if (lvl >= reward_level) {
 			if (reward_no_recieve) {
-				BpLockedText.text = $.Localize( "battleshop_gives" )
+				BpLockedText.text = $.Localize( "#battleshop_gives" )
 			} else {
-				BpLockedText.text = $.Localize( "battlepass_gives" )
+				BpLockedText.text = $.Localize( "#battlepass_gives" )
 			}
 		} else {
-			BpLockedText.text = $.Localize( "battleshop_locked" )
+			BpLockedText.text = $.Localize( "#battleshop_locked" )
 			RewardImage.style.brightness = "0.05"
 		}
 
@@ -332,7 +332,7 @@ function CreateDonateReward(reward_level, lvl) {
 
 		var BpDonateText = $.CreatePanel("Label", DonateInfo, "BpDonateText");
 		BpDonateText.AddClass("BpDonateText");
-		BpDonateText.text = $.Localize( "battlepass_inbp" )
+		BpDonateText.text = $.Localize( "#battlepass_inbp" )
 	} else {
 		var RewardPanelDonate = $.CreatePanel("Panel", $("#BattlePass_Donate"), "RewardPanelDonate" + reward_level );
 		RewardPanelDonate.AddClass("RewardPaneClear");		

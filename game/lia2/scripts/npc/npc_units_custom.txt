@@ -3227,7 +3227,7 @@
 		"VisionNighttimeRange" "800" 
 	
 		"PathfindingSearchDepthScale" "0.5" //0.3
-		"vscripts"	"AI\ai_autocast.lua"
+		"vscripts"	"AI\attack_wave_only.lua"
 	
 		"HasInventory" "0" 
 	}
@@ -3382,7 +3382,7 @@
 		"VisionNighttimeRange" "800" 
 	
 		"PathfindingSearchDepthScale" "0.5" //0.3
-		"vscripts"	"AI\ai_autocast.lua"
+		"vscripts"	"AI\attack_wave_only.lua"
 	
 		"HasInventory" "0" 
 	
@@ -3622,7 +3622,7 @@
 		"VisionNighttimeRange" "800" 
 	
 		"PathfindingSearchDepthScale" "0.5" //0.3
-		"vscripts"	"AI\ai_autocast.lua"
+		"vscripts"	"AI\attack_wave_only.lua"
 	
 		"HasInventory" "0" 
 	}
@@ -3716,7 +3716,7 @@
 		"VisionNighttimeRange" "800" 
 	
 		"PathfindingSearchDepthScale" "0.5" //0.3
-		"vscripts"	"AI\ai_autocast.lua"
+		"vscripts"	"AI\attack_wave_only.lua"
 	
 		"HasInventory" "0" 
 	}
@@ -3863,7 +3863,7 @@
 	
 		"PathfindingSearchDepthScale" "0.5" //0.3
 		
-		"vscripts"	"AI\ai_autocast.lua" //
+		"vscripts"	"AI\attack_wave_only.lua" //
 		
 	
 	}
@@ -3926,7 +3926,7 @@
 	
 		"PathfindingSearchDepthScale" "0.5" //0.3
 		
-		"vscripts"	"AI\ai_autocast.lua" //
+		"vscripts"	"AI\attack_wave_only.lua" //
 	}
 	
 	"3_wave_creep_extreme" 
@@ -3990,7 +3990,7 @@
 	
 		"PathfindingSearchDepthScale" "0.5" //0.3
 		
-		"vscripts"	"AI\ai_autocast.lua" //
+		"vscripts"	"AI\attack_wave_only.lua" //
 	}
 	
 	"4_wave_creep_extreme" 
@@ -4056,7 +4056,7 @@
 		
 		"PathfindingSearchDepthScale" "0.5" //0.3
 		
-		"vscripts"	"AI\ai_autocast.lua" //
+		"vscripts"	"AI\attack_wave_only.lua" //
 	}
 	
 	"6_wave_creep_extreme" 
@@ -4208,7 +4208,7 @@
 	
 		"PathfindingSearchDepthScale" "0.5" //0.3
 	
-		"vscripts"	"AI\ai_autocast.lua" //
+		"vscripts"	"AI\attack_wave_only.lua" //
 	
 		"HasInventory" "0" 
 	}
@@ -4286,7 +4286,7 @@
 	
 		"PathfindingSearchDepthScale" "0.5" //0.3
 	
-		"vscripts"	"AI\ai_autocast.lua" //
+		"vscripts"	"AI\attack_wave_only.lua" //
 	
 		"HasInventory" "0" 
 	}
@@ -4368,7 +4368,7 @@
 	
 		"PathfindingSearchDepthScale" "0.5" //0.3
 	
-		"vscripts"	"AI\ai_autocast.lua" //
+		"vscripts"	"AI\attack_wave_only.lua" //
 	
 	
 		"HasInventory" "0" 
@@ -7432,7 +7432,7 @@
 	"VisionNighttimeRange" "800" 
 	
 	"PathfindingSearchDepthScale" "1" //0.3
-	"vscripts"	"AI\ai_autocast.lua"
+	"vscripts"	"AI\attack_wave_only.lua"
 	
 	"HasInventory" "0" 
 	}
@@ -7589,7 +7589,7 @@
 	"VisionNighttimeRange" "800" 
 	
 	"PathfindingSearchDepthScale" "0.75" //0.3
-	"vscripts"	"AI\ai_autocast.lua"
+	"vscripts"	"AI\attack_wave_only.lua"
 	
 	"HasInventory" "0" 
 	
@@ -7830,7 +7830,7 @@
 	"VisionNighttimeRange" "800" 
 	
 	"PathfindingSearchDepthScale" "0.75" //0.3
-	"vscripts"	"AI\ai_autocast.lua"
+	"vscripts"	"AI\attack_wave_only.lua"
 	
 	"HasInventory" "0" 
 	}
@@ -7923,7 +7923,7 @@
 	"VisionNighttimeRange" "800" 
 	
 	"PathfindingSearchDepthScale" "0.75" //0.3
-	"vscripts"	"AI\ai_autocast.lua"
+	"vscripts"	"AI\attack_wave_only.lua"
 	
 	"HasInventory" "0" 
 	}
@@ -8071,7 +8071,7 @@
 	
 		"PathfindingSearchDepthScale" "0.75" //0.3
 		
-		"vscripts"	"AI\ai_autocast.lua" //
+		"vscripts"	"AI\attack_wave_only.lua" //
 		
 	
 	}
@@ -8134,7 +8134,7 @@
 	
 		"PathfindingSearchDepthScale" "0.75" //0.3
 		
-		"vscripts"	"AI\ai_autocast.lua" //
+		"vscripts"	"AI\attack_wave_only.lua" //
 	}
 	
 	"3_wave_creep" 
@@ -8198,7 +8198,7 @@
 	
 		"PathfindingSearchDepthScale" "0.75" //0.3
 		
-		"vscripts"	"AI\ai_autocast.lua" //
+		"vscripts"	"AI\attack_wave_only.lua" //
 	}
 	
 	"4_wave_creep" 
@@ -8264,7 +8264,7 @@
 		
 		"PathfindingSearchDepthScale" "0.75" //0.3
 		
-		"vscripts"	"AI\ai_autocast.lua" //
+		"vscripts"	"AI\attack_wave_only.lua" //
 	}
 	
 	"6_wave_creep" 
@@ -8418,7 +8418,7 @@
 	
 	"PathfindingSearchDepthScale" "0.75" //0.3
 	
-	"vscripts"	"AI\ai_autocast.lua" //
+	"vscripts"	"AI\attack_wave_only.lua" //
 	
 	"HasInventory" "0" 
 	}
@@ -8497,7 +8497,7 @@
 	
 	"PathfindingSearchDepthScale" "0.75" //0.3
 	
-	"vscripts"	"AI\ai_autocast.lua" //
+	"vscripts"	"AI\attack_wave_only.lua" //
 	
 	"HasInventory" "0" 
 	}
@@ -8579,7 +8579,7 @@
 	
 	"PathfindingSearchDepthScale" "0.75" //0.3
 	
-	"vscripts"	"AI\ai_autocast.lua" //
+	"vscripts"	"AI\attack_wave_only.lua" //
 	
 	
 	"HasInventory" "0" 

@@ -20,7 +20,7 @@ function Survival:OnNPCSpawned(event)
         end
     end
 end
-
+UpdateTeamSlot = 0
 function Survival:OnPlayerPickHero(keys)
     PrintTable("OnPlayerPickHero",keys)
 
@@ -32,18 +32,25 @@ function Survival:OnPlayerPickHero(keys)
     if heroSelected then --отсеиваем иллюзии
         return
     end
-
     table.insert(self.tHeroes, hero)
 
     
     CustomPlayerResource:InitPlayer(playerID)
     --Upgrades:InitPlayer(playerID)
     PlayerResource:ModifyLumber(playerID,3)
+    
     PlayerResource:UpdateTeamSlot(playerID, DOTA_TEAM_GOODGUYS, 1)
-
+    
     local player = EntIndexToHScript(keys.player) 
     if player then 
-        player:SetTeam(DOTA_TEAM_GOODGUYS) 
+        if GetMapName() == "lia_8_clans" and UpdateTeamSlot > 3 then
+            PlayerResource:UpdateTeamSlot(playerID, DOTA_TEAM_CUSTOM_1, 1)
+            player:SetTeam(DOTA_TEAM_CUSTOM_1) 
+            UpdateTeamSlot = UpdateTeamSlot + 1
+        else 
+            player:SetTeam(DOTA_TEAM_GOODGUYS) 
+        end
+        
     else
         self:HideHero(hero)
     end

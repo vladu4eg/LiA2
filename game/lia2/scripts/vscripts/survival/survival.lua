@@ -8,9 +8,9 @@ _G.SURVIVAL_STATE_ROUND_FINALBOSS = 5
 _G.SURVIVAL_STATE_DUEL_TIME = 6
 _G.SURVIVAL_STATE_POST_GAME = 7
 
-_G.WAVE_SPAWN_COORD_LEFT    = Vector(-1770,  1177, 0)
+_G.WAVE_SPAWN_COORD_LEFT    = Vector(-9990,  1177, 0)
 _G.WAVE_SPAWN_COORD_LEFT_2    = Vector(6000,  1100, 0)
-_G.WAVE_SPAWN_COORD_TOP     = Vector(108,  3068, 0) 
+_G.WAVE_SPAWN_COORD_TOP     = Vector(-7774,  3400, 0) 
 _G.WAVE_SPAWN_COORD_TOP_2     = Vector(8250,  3300, 0) 
 _G.ARENA_TELEPORT_COORD_TOP = Vector(-7, -2004, 0)
 _G.ARENA_TELEPORT_COORD_BOT = Vector(-7, -3050, 0)
@@ -165,7 +165,7 @@ function Survival:InitSurvival()
  
         end
     end
-    GameRules.PlayersCount = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS) + PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS)
+    GameRules.PlayersCount = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS + DOTA_TEAM_CUSTOM_1) + PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS)
     Timers:CreateTimer(25, function() wearables:SetPart() end)
     Timers:CreateTimer(35, function() SelectPets:SetPets() end)
     Stats.RequestDataTop10("5", callback)

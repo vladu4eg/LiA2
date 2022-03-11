@@ -1,8 +1,16 @@
+
 function Survival:GetHeroToDuel()
+    local team
     for i = 1, 8 do
         local playerId = PlayerResource:GetPlayerIdAtPlace(i)
         local hero = PlayerResource:GetSelectedHeroEntity(playerId)
         if hero and not hero.IsDueled and IsValidEntity(hero) and not hero.hidden then
+            if GetMapName() == "lia_8_clans" then
+                if hero:GetTeam() == team then
+                    return nil
+                end
+            end
+            team = hero:GetTeam()
             hero.IsDueled = true
             return hero
         end

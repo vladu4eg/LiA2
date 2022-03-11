@@ -1,4 +1,4 @@
-"lia_extreme_8_players_shops"
+"lia_extreme_8_players_spring_shops"
 {
  //Home Shop Start
  //--------------------------

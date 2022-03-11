@@ -412,7 +412,7 @@ function IsBlockedF(params)
 	end
 	--
 	--print("--= ")
-	--print("##table_near_allied_sort_up = ",#table_near_allied_sort_up)
+	--print("#table_near_allied_sort_up = ",#table_near_allied_sort_up)
 	--print("#table_near_allied_sort_down = ",#table_near_allied_sort_down)
 	--print("--= ")
 	--
@@ -535,7 +535,27 @@ function AICreepsAttackEachUnit(params)
 			--print("3")
 	local fv = target:GetForwardVector()
     local front_position = absTarget + fv * 100
-			unit:MoveToPositionAggressive(front_position)
+			local radius = 99999
+			if GetMapName() == "lia_8_clans" then
+				radius = 5000
+			end
+		
+			local enemies = FindUnitsInRadius( 
+				unit:GetTeamNumber(),		--команда юнита
+				unit:GetAbsOrigin(),		--местоположение юнита
+				nil,	--айди юнита (необязательно)
+				radius,	--радиус поиска
+				DOTA_UNIT_TARGET_TEAM_ENEMY,	-- юнитов чьей команды ищем вражеской/дружественной
+				DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,	--юнитов какого типа ищем 
+				DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE,	--поиск по флагам
+				FIND_CLOSEST,	--сортировка от ближнего к дальнему 
+				false )
+		
+			local enemy = enemies[1]	-- врагом выбирается первый близжайший
+			if enemy ~= nil then
+				unit:MoveToPositionAggressive(front_position)
+			end
+
 		--
 		
 	--end
