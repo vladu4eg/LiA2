@@ -1,8 +1,8 @@
 "AddonInfo"
 {
-	"maps"  "lia_8_players_spring lia_extreme_8_players_springlia_light_8_players_spring lia_8_clans"
+	"maps"  "lia_8_players_spring lia_extreme_8_players_spring lia_light_8_players_spring lia_8_clans"
 	"IsPlayable" "1"
-	"TeamCount" "4"
+	"TeamCount" "5"
 	
 	"lia_8_players_spring"
  	{

@@ -81,7 +81,16 @@ function RespawnAllHeroes()
 	DoWithAllHeroes(function(hero)
 		if not hero:IsAlive() then
 			hero:RespawnHero(false,false)
-			FindClearSpaceForUnit_IgnoreNeverMove(hero, Vector(0,1500,168)+RandomVector(RandomFloat(0, 200)), false)
+			if GetMapName() == "lia_8_clans"  then
+				if hero:GetTeam() == DOTA_TEAM_GOODGUYS  then
+					FindClearSpaceForUnit_IgnoreNeverMove(hero, Vector(8100,1500,168)+RandomVector(RandomFloat(0, 200)), false)
+				else
+					FindClearSpaceForUnit_IgnoreNeverMove(hero, Vector(-7957,1500,168)+RandomVector(RandomFloat(0, 200)), false)
+				end
+			else
+				FindClearSpaceForUnit_IgnoreNeverMove(hero, Vector(0,1500,168)+RandomVector(RandomFloat(0, 200)), false)
+			end
+			
 		end
 	end)
 end

@@ -8,12 +8,22 @@ _G.SURVIVAL_STATE_ROUND_FINALBOSS = 5
 _G.SURVIVAL_STATE_DUEL_TIME = 6
 _G.SURVIVAL_STATE_POST_GAME = 7
 
-_G.WAVE_SPAWN_COORD_LEFT    = Vector(-9990,  1177, 0)
-_G.WAVE_SPAWN_COORD_LEFT_2    = Vector(6000,  1100, 0)
-_G.WAVE_SPAWN_COORD_TOP     = Vector(-7774,  3400, 0) 
-_G.WAVE_SPAWN_COORD_TOP_2     = Vector(8250,  3300, 0) 
-_G.ARENA_TELEPORT_COORD_TOP = Vector(-7, -2004, 0)
-_G.ARENA_TELEPORT_COORD_BOT = Vector(-7, -3050, 0)
+if GetMapName() == "lia_8_clans" then
+    _G.WAVE_SPAWN_COORD_LEFT    = Vector(-9990,  1177, 0)
+    _G.WAVE_SPAWN_COORD_LEFT_2    = Vector(6000,  1100, 0)
+    _G.WAVE_SPAWN_COORD_TOP     = Vector(-7774,  3400, 0) 
+    _G.WAVE_SPAWN_COORD_TOP_2     = Vector(8250,  3300, 0) 
+    _G.ARENA_TELEPORT_COORD_TOP = Vector(-7, -2004, 0)
+    _G.ARENA_TELEPORT_COORD_BOT = Vector(-7, -3050, 0)
+else
+    _G.WAVE_SPAWN_COORD_LEFT    = Vector(-1770,  1177, 0)
+    _G.WAVE_SPAWN_COORD_TOP     = Vector(108,  3068, 0) 
+    _G.ARENA_TELEPORT_COORD_TOP = Vector(-7, -2004, 0)
+    _G.ARENA_TELEPORT_COORD_BOT = Vector(-7, -3050, 0)  
+end
+
+
+
 _G.ARENA_CENTER_COORD       = Vector(-7, -2506, 0)
 
 
@@ -142,6 +152,7 @@ function Survival:InitSurvival()
     if GetMapName() == "lia_8_clans" then
         _G.ARENA_LEFT_BOTTOM_CORNER_2 = Entities:FindByName(nil, "arena_left_bottom_corner_2"):GetAbsOrigin()
         _G.ARENA_TOP_RIGHT_CORNER_2 = Entities:FindByName(nil, "arena_top_right_corner_2"):GetAbsOrigin()
+        self.hHealer2 = Entities:FindByName(nil,"lia_trigger_healer_2")
     end
     SetRuneSpawnRegion("rectangle",ARENA_LEFT_BOTTOM_CORNER,ARENA_TOP_RIGHT_CORNER)
     StartRunesSpawn()
@@ -165,7 +176,7 @@ function Survival:InitSurvival()
  
         end
     end
-    GameRules.PlayersCount = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS + DOTA_TEAM_CUSTOM_1) + PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS)
+    GameRules.PlayersCount = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS + DOTA_TEAM_CUSTOM_1)
     Timers:CreateTimer(25, function() wearables:SetPart() end)
     Timers:CreateTimer(35, function() SelectPets:SetPets() end)
     Stats.RequestDataTop10("5", callback)
@@ -490,7 +501,9 @@ function Survival:PrepareNextRound()
 
 
     self.hHealer:Enable()
-
+    if GetMapName() == "lia_8_clans" then
+        self.hHealer2:Enable()
+    end
     local creepName = tostring(self.nRoundNum).."_wave_creep"
     local bossName = tostring(self.nRoundNum).."_wave_boss"
     if self.IsExtreme then 
@@ -668,7 +681,9 @@ function Survival:StartRound()
     FightRecap:Init()
 
     self.hHealer:Disable()
-
+    if GetMapName() == "lia_8_clans" then
+        self.hHealer2:Disable()
+    end
     
     LiA.bForceRoundEnabled = false
     CustomGameEventManager:Send_ServerToAllClients("round_force_enabled", {enabled = false})

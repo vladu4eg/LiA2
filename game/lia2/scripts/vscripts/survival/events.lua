@@ -39,16 +39,19 @@ function Survival:OnPlayerPickHero(keys)
     --Upgrades:InitPlayer(playerID)
     PlayerResource:ModifyLumber(playerID,3)
     
-    PlayerResource:UpdateTeamSlot(playerID, DOTA_TEAM_GOODGUYS, 1)
     
     local player = EntIndexToHScript(keys.player) 
-    if player then 
+    if hero then 
         if GetMapName() == "lia_8_clans" and UpdateTeamSlot > 3 then
+            PlayerResource:SetCustomTeamAssignment(playerID, DOTA_TEAM_CUSTOM_1)
             PlayerResource:UpdateTeamSlot(playerID, DOTA_TEAM_CUSTOM_1, 1)
-            player:SetTeam(DOTA_TEAM_CUSTOM_1) 
+            hero:SetTeam(DOTA_TEAM_CUSTOM_1)
             UpdateTeamSlot = UpdateTeamSlot + 1
         else 
-            player:SetTeam(DOTA_TEAM_GOODGUYS) 
+            PlayerResource:SetCustomTeamAssignment(playerID, DOTA_TEAM_GOODGUYS)
+            PlayerResource:UpdateTeamSlot(playerID, DOTA_TEAM_GOODGUYS, 1)
+            hero:SetTeam(DOTA_TEAM_GOODGUYS)
+            UpdateTeamSlot = UpdateTeamSlot + 1
         end
         
     else

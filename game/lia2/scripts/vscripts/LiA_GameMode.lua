@@ -193,7 +193,6 @@ function LiA:InitGameMode()
 
 
     trigger_shop = Entities:FindByClassname(nil, "trigger_shop") --находим триггер отвечающий за работу магазина
-    
 	GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
 	MergeTables(GameRules.UnitKV, LoadKeyValues("scripts/npc/npc_heroes_custom.txt")) --Load HeroKV into UnitKV
 

@@ -48,5 +48,54 @@ function Spawn(entityKeyValues)
 
 		--print(unitName,thisEntity:GetHullRadius())
 	end)
+
+	if GetMapName() == "lia_8_clans" then
+		if unitName == "barricades_2" or unitName == "arena_rock_2" then
+			thisEntity:SetHullRadius(50)
+			thisEntity:SetTeam(DOTA_TEAM_CUSTOM_1)
+		end
+	
+		if unitName == "barricades_big_2" then
+			thisEntity:SetHullRadius(55)
+			thisEntity:SetTeam(DOTA_TEAM_CUSTOM_1)
+		end
+	
+		if unitName == "barricades_small_2" then
+			thisEntity:SetHullRadius(45)
+			thisEntity:SetTeam(DOTA_TEAM_CUSTOM_1)
+		end
+	
+		if unitName == "big_barrel_2" then
+			thisEntity:SetHullRadius(24)
+			thisEntity:SetTeam(DOTA_TEAM_CUSTOM_1)
+		end
+	
+		if unitName == "small_barrel_2" then
+			thisEntity:SetHullRadius(24)
+			thisEntity:SetTeam(DOTA_TEAM_CUSTOM_1)
+		end
+		
+		if unitName == "npc_dota_creature_barrel_2" then
+			thisEntity:SetHullRadius(24)
+			thisEntity:SetTeam(DOTA_TEAM_CUSTOM_1)
+		end
+	
+		if unitName == "small_barrel_side_2" then
+			thisEntity:SetHullRadius(50)
+			thisEntity:SetTeam(DOTA_TEAM_CUSTOM_1)
+		end
+	
+		if thisEntity:GetUnitName() == "tnt_barrel_2" then
+			thisEntity:FindAbilityByName("barrel_explosion"):SetLevel(1)
+		end
+		
+		
+		
+		Timers:CreateTimer(0.01,function()
+			thisEntity:RemoveModifierByName("modifier_invulnerable")
+	
+			--print(unitName,thisEntity:GetHullRadius())
+		end)
+	end
 	--print("barrelspawned")
 end

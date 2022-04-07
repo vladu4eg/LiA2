@@ -49,6 +49,7 @@
 	"ScoreCol_Rating"								"Easy"
 	"ScoreCol_Rating2"								"Normal"
 	"ScoreCol_Rating3"								"Hard"
+	"ScoreCol_RatingEnd"							"Change"
 	"end_screen_victory"		"YOU WIN !"
 	"end_screen_lose"		"YOU LOSE !"
 
